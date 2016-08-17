@@ -40,7 +40,7 @@ class AdminMenu extends \humhub\widgets\BaseMenu
             'isVisible' => \Yii::$app->user->isAdmin(),
         ));
 
-        $this->addItem(array(
+        /*$this->addItem(array(
             'label' => Yii::t('AdminModule.widgets_AdminMenuWidget', 'Spaces'),
             'id' => 'spaces',
             'url' => Url::toRoute('/admin/space'),
@@ -48,8 +48,8 @@ class AdminMenu extends \humhub\widgets\BaseMenu
             'sortOrder' => 400,
             'isActive' => (Yii::$app->controller->module && Yii::$app->controller->module->id == 'admin' && Yii::$app->controller->id == 'space'),
             'isVisible' => Yii::$app->user->isAdmin(),
-        ));
-        $this->addItem(array(
+        ));*/
+        /*$this->addItem(array(
             'label' => Yii::t('AdminModule.widgets_AdminMenuWidget', 'Modules'),
             'id' => 'modules',
             'url' => Url::toRoute('/admin/module'),
@@ -58,9 +58,9 @@ class AdminMenu extends \humhub\widgets\BaseMenu
             'newItemCount' => 0,
             'isActive' => (Yii::$app->controller->module && Yii::$app->controller->module->id == 'admin' && Yii::$app->controller->id == 'module'),
             'isVisible' => Yii::$app->user->isAdmin()
-        ));
+        ));*/
 
-        $this->addItem(array(
+/*        $this->addItem(array(
             'label' => Yii::t('AdminModule.widgets_AdminMenuWidget', 'Settings'),
             'url' => Url::toRoute('/admin/setting'),
             'icon' => '<i class="fa fa-gears"></i>',
@@ -68,9 +68,9 @@ class AdminMenu extends \humhub\widgets\BaseMenu
             'newItemCount' => 0,
             'isActive' => (Yii::$app->controller->module && Yii::$app->controller->module->id == 'setting'),
             'isVisible' => Yii::$app->user->isAdmin(),
-        ));
+        ));*/
 
-        $this->addItem(array(
+/*        $this->addItem(array(
             'label' => Yii::t('AdminModule.widgets_AdminMenuWidget', 'Information'),
             'url' => Url::toRoute('/admin/information'),
             'icon' => '<i class="fa fa-info-circle"></i>',
@@ -78,7 +78,7 @@ class AdminMenu extends \humhub\widgets\BaseMenu
             'newItemCount' => 0,
             'isActive' => (Yii::$app->controller->module && Yii::$app->controller->module->id == 'admin' && Yii::$app->controller->id == 'information'),
             'isVisible' => Yii::$app->user->isAdmin(),
-        ));
+        ));*/
 
         parent::init();
     }

@@ -11,11 +11,11 @@ use humhub\widgets\GridView;
         <?php echo Yii::t('AdminModule.views_user_index', 'This overview contains a list of each registered user with actions to view, edit and delete users.'); ?>
     </div>
     <div class="table-responsive">
-        <div class="pull-right">
-            <?= Html::a('<i class="fa fa-plus" aria-hidden="true"></i>&nbsp;&nbsp;' . Yii::t('AdminModule.views_user_index', 'Add new user'), ['/admin/user/add'], ['class' => 'btn btn-success', 'data-ui-loader'=>'']); ?>
-            <?= Html::a('<i class="fa fa-paper-plane" aria-hidden="true"></i>&nbsp;&nbsp;' . Yii::t('AdminModule.views_user_index', 'Send invite'), ['/user/invite'], ['class' => 'btn btn-success', 'data-target' => '#globalModal']); ?>
+        <!--<div class="pull-right">
+            <?/*= Html::a('<i class="fa fa-plus" aria-hidden="true"></i>&nbsp;&nbsp;' . Yii::t('AdminModule.views_user_index', 'Add new user'), ['/admin/user/add'], ['class' => 'btn btn-success', 'data-ui-loader'=>'']); */?>
+            <?/*= Html::a('<i class="fa fa-paper-plane" aria-hidden="true"></i>&nbsp;&nbsp;' . Yii::t('AdminModule.views_user_index', 'Send invite'), ['/user/invite'], ['class' => 'btn btn-success', 'data-target' => '#globalModal']); */?>
         </div>
-
+-->
         <?php
         echo GridView::widget([
             'dataProvider' => $dataProvider,
@@ -49,6 +49,11 @@ use humhub\widgets\GridView;
                     'header' => Yii::t('AdminModule.views_user_index', 'Actions'),
                     'class' => 'yii\grid\ActionColumn',
                     'options' => ['style' => 'width:80px; min-width:80px;'],
+                    'visibleButtons' => [
+                        'view' => function ($model, $key, $index) {
+                            return false;
+                        }
+                    ],
                     'buttons' => [
                         'view' => function($url, $model) {
                             return Html::a('<i class="fa fa-eye"></i>', $model->getUrl(), ['class' => 'btn btn-primary btn-xs tt']);

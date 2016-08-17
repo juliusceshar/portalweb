@@ -44,7 +44,7 @@ class AccountMenu extends BaseMenu
             'isActive' => ($controllerAction == "edit" || $controllerAction == "change-email" || $controllerAction == "change-password" || $controllerAction == "delete"),
         ));
 
-        $this->addItem(array(
+        /*$this->addItem(array(
             'label' => Yii::t('UserModule.widgets_AccountMenuWidget', 'Settings'),
             'icon' => '<i class="fa fa-wrench"></i>',
             'group' => 'account',
@@ -72,7 +72,7 @@ class AccountMenu extends BaseMenu
                 'sortOrder' => 120,
                 'isActive' => (Yii::$app->controller->action->id == "editModules"),
             ));
-        }
+        }*/
 
         parent::init();
     }

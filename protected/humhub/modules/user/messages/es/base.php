@@ -21,7 +21,7 @@ return [
     'Basic Settings' => '',
     'Change Email' => '',
     'Change Password' => '',
-    'Confirm new password' => '',
+    'Confirm new password' => 'Confirmar nueva contraseña',
     'Connect account' => '',
     'Connected Accounts' => '',
     'Connected accounts' => '',

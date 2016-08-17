@@ -1,6 +1,6 @@
 <?php
 return array (
-  'Create new space' => 'Crear nuevo espacio',
-  'My spaces' => 'Mis espacios',
+  'Create new space' => 'Crear nuevo grupo',
+  'My spaces' => 'Mis grupos',
   'Search' => 'Buscar',
 );

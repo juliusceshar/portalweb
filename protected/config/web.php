@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'bootstrap' => ['debug'],
+    /*'bootstrap' => ['debug'],
     'modules' => [
         // ...
 
@@ -15,6 +15,6 @@ return [
         ],
 
         // ...
-    ]
+    ]*/
 ];
 
