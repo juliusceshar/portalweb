@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 17-08-2016 a las 09:59:21
+-- Tiempo de generación: 17-08-2016 a las 13:01:43
 -- Versión del servidor: 10.1.13-MariaDB
 -- Versión de PHP: 5.6.23
 
@@ -40,13 +40,19 @@ CREATE TABLE `activity` (
 
 INSERT INTO `activity` (`id`, `class`, `module`, `object_model`, `object_id`) VALUES
 (1, 'humhub\\modules\\space\\activities\\Created', 'space', 'humhub\\modules\\space\\models\\Space', 1),
-(2, 'humhub\\modules\\content\\activities\\ContentCreated', 'content', 'humhub\\modules\\post\\models\\Post', 1),
 (3, 'humhub\\modules\\space\\activities\\MemberAdded', 'space', 'humhub\\modules\\space\\models\\Space', 1),
-(4, 'humhub\\modules\\space\\activities\\MemberAdded', 'space', 'humhub\\modules\\space\\models\\Space', 1),
 (5, 'humhub\\modules\\space\\activities\\MemberAdded', 'space', 'humhub\\modules\\space\\models\\Space', 1),
 (6, 'humhub\\modules\\space\\activities\\MemberAdded', 'space', 'humhub\\modules\\space\\models\\Space', 1),
 (7, 'humhub\\modules\\space\\activities\\MemberAdded', 'space', 'humhub\\modules\\space\\models\\Space', 1),
-(8, 'humhub\\modules\\space\\activities\\MemberAdded', 'space', 'humhub\\modules\\space\\models\\Space', 1);
+(8, 'humhub\\modules\\space\\activities\\MemberAdded', 'space', 'humhub\\modules\\space\\models\\Space', 1),
+(9, 'humhub\\modules\\space\\activities\\Created', 'space', 'humhub\\modules\\space\\models\\Space', 2),
+(10, 'humhub\\modules\\content\\activities\\ContentCreated', 'content', 'humhub\\modules\\post\\models\\Post', 2),
+(11, 'humhub\\modules\\space\\activities\\Created', 'space', 'humhub\\modules\\space\\models\\Space', 3),
+(12, 'humhub\\modules\\content\\activities\\ContentCreated', 'content', 'humhub\\modules\\post\\models\\Post', 3),
+(13, 'humhub\\modules\\space\\activities\\Created', 'space', 'humhub\\modules\\space\\models\\Space', 4),
+(14, 'humhub\\modules\\space\\activities\\Created', 'space', 'humhub\\modules\\space\\models\\Space', 5),
+(15, 'humhub\\modules\\space\\activities\\MemberAdded', 'space', 'humhub\\modules\\space\\models\\Space', 5),
+(16, 'humhub\\modules\\space\\activities\\MemberAdded', 'space', 'humhub\\modules\\space\\models\\Space', 2);
 
 -- --------------------------------------------------------
 
@@ -92,14 +98,21 @@ CREATE TABLE `content` (
 
 INSERT INTO `content` (`id`, `guid`, `object_model`, `object_id`, `visibility`, `sticked`, `archived`, `created_at`, `created_by`, `updated_at`, `updated_by`, `contentcontainer_id`) VALUES
 (1, 'f0ce93b7-2d5e-41ee-9048-147f97bef9f1', 'humhub\\modules\\activity\\models\\Activity', 1, 1, 0, '0', '2016-08-17 00:16:26', 1, '2016-08-17 00:16:26', 1, 2),
-(2, '2c0598ce-aebf-458e-b25b-dbe0f3fb7334', 'humhub\\modules\\post\\models\\Post', 1, 1, 0, '0', '2016-08-17 00:16:26', 1, '2016-08-17 00:16:26', 1, 2),
-(3, 'e90f3275-c181-42c9-9da3-e4fc6bc5d2ec', 'humhub\\modules\\activity\\models\\Activity', 2, 1, 0, '0', '2016-08-17 00:16:26', 1, '2016-08-17 00:16:26', 1, 2),
 (4, 'c3d15ce4-c16e-42fc-8454-b418c3b252e8', 'humhub\\modules\\activity\\models\\Activity', 3, 0, 0, '0', '2016-08-17 01:07:49', 2, '2016-08-17 01:07:49', 1, 2),
-(5, 'f4f391ca-ffbf-4d7b-9721-3ec27b7ceb71', 'humhub\\modules\\activity\\models\\Activity', 4, 0, 0, '0', '2016-08-17 02:29:56', 3, '2016-08-17 02:29:56', 1, 2),
 (6, 'eb9937f1-ce3f-4f20-a9a6-03928f0cc77a', 'humhub\\modules\\activity\\models\\Activity', 5, 0, 0, '0', '2016-08-17 02:32:39', 4, '2016-08-17 02:32:39', NULL, 2),
 (7, '24f17a70-9dbf-487a-8ce4-752f1297c3c1', 'humhub\\modules\\activity\\models\\Activity', 6, 0, 0, '0', '2016-08-17 03:08:31', 5, '2016-08-17 03:08:31', NULL, 2),
 (8, '552bbc17-3fbb-4627-a99d-8883e09d71a2', 'humhub\\modules\\activity\\models\\Activity', 7, 0, 0, '0', '2016-08-17 03:52:10', 6, '2016-08-17 03:52:10', NULL, 2),
-(9, 'f421b24f-16d9-4e28-963a-885597806c67', 'humhub\\modules\\activity\\models\\Activity', 8, 0, 0, '0', '2016-08-17 03:52:44', 7, '2016-08-17 03:52:44', NULL, 2);
+(9, 'f421b24f-16d9-4e28-963a-885597806c67', 'humhub\\modules\\activity\\models\\Activity', 8, 0, 0, '0', '2016-08-17 03:52:44', 7, '2016-08-17 03:52:44', NULL, 2),
+(10, 'd4da0eba-da9e-4fe8-ae07-26b08009257b', 'humhub\\modules\\activity\\models\\Activity', 9, 1, 0, '0', '2016-08-17 04:59:50', 1, '2016-08-17 04:59:50', 1, 9),
+(11, '2a7c8f58-e6c0-4403-8785-5047bdf98ca1', 'humhub\\modules\\post\\models\\Post', 2, 0, 0, '0', '2016-08-17 05:00:24', 1, '2016-08-17 05:00:24', 1, 9),
+(12, 'd4a02a62-ffcb-43a4-87db-c8c483ae6aa3', 'humhub\\modules\\activity\\models\\Activity', 10, 0, 0, '0', '2016-08-17 05:00:24', 1, '2016-08-17 05:00:24', 1, 9),
+(13, '9d1d5a68-fb3f-4e32-a189-f43916c73c7f', 'humhub\\modules\\activity\\models\\Activity', 11, 1, 0, '0', '2016-08-17 05:41:58', 1, '2016-08-17 05:41:58', 1, 10),
+(14, '1bd25a37-83d6-45b2-8444-82662bb06710', 'humhub\\modules\\post\\models\\Post', 3, 0, 0, '0', '2016-08-17 05:43:39', 1, '2016-08-17 05:43:39', 1, 10),
+(15, '5208c88e-562f-4f19-84ab-a07057f09c1f', 'humhub\\modules\\activity\\models\\Activity', 12, 0, 0, '0', '2016-08-17 05:43:40', 1, '2016-08-17 05:43:40', 1, 10),
+(16, '63ffeddb-6538-48e5-916b-3aef541b953b', 'humhub\\modules\\activity\\models\\Activity', 13, 1, 0, '0', '2016-08-17 05:46:12', 1, '2016-08-17 05:46:12', 1, 11),
+(17, '509a6c73-2277-4237-82e1-696200fb161e', 'humhub\\modules\\activity\\models\\Activity', 14, 1, 0, '0', '2016-08-17 05:59:10', 2, '2016-08-17 05:59:10', 2, 12),
+(18, '56781ad0-89a4-4c33-9ee9-c1dcd25e3772', 'humhub\\modules\\activity\\models\\Activity', 15, 0, 0, '0', '2016-08-17 06:00:21', 1, '2016-08-17 06:00:21', 1, 12),
+(19, '00acf6b5-c42d-4cd5-8852-0235eadebb1c', 'humhub\\modules\\activity\\models\\Activity', 16, 0, 0, '0', '2016-08-17 06:25:37', 2, '2016-08-17 06:25:37', 2, 9);
 
 -- --------------------------------------------------------
 
@@ -124,11 +137,14 @@ INSERT INTO `contentcontainer` (`id`, `guid`, `class`, `pk`, `owner_user_id`, `w
 (1, 'e445536f-f62b-45f7-8dd2-0c1f4cddc745', 'humhub\\modules\\user\\models\\User', 1, 1, 1),
 (2, '8acd82e6-f687-46aa-a9bd-ae0006f5e47a', 'humhub\\modules\\space\\models\\Space', 1, 1, 2),
 (3, '68273021-ab01-4389-8c01-fa605f7f845f', 'humhub\\modules\\user\\models\\User', 2, 2, 3),
-(4, '6b08b5a4-4793-4a21-af77-f91a02937464', 'humhub\\modules\\user\\models\\User', 3, 3, 4),
 (5, 'bed1aec2-e06a-43df-aa24-4e6ef2d3c830', 'humhub\\modules\\user\\models\\User', 4, 4, 5),
 (6, 'dc230e05-6f91-4e4e-ad1c-c3fc440f7f0b', 'humhub\\modules\\user\\models\\User', 5, 5, 6),
 (7, '4d5e40b8-1ce5-4b9f-bbd4-29c039b9cde2', 'humhub\\modules\\user\\models\\User', 6, 6, 7),
-(8, '30077df6-f9b0-41d3-b62f-ebabc4a2a44c', 'humhub\\modules\\user\\models\\User', 7, 7, 8);
+(8, '30077df6-f9b0-41d3-b62f-ebabc4a2a44c', 'humhub\\modules\\user\\models\\User', 7, 7, 8),
+(9, '1337dd66-4e48-4853-bf27-031868aaae8f', 'humhub\\modules\\space\\models\\Space', 2, 1, 9),
+(10, 'efc613df-7a03-4c7f-a63c-f8e02485f3ed', 'humhub\\modules\\space\\models\\Space', 3, 1, 10),
+(11, 'b6eed4b4-5e87-42e5-86ab-aa92287cf0d8', 'humhub\\modules\\space\\models\\Space', 4, 1, 11),
+(12, '20da4c5e-0ce9-471d-9882-44c04cdd59a4', 'humhub\\modules\\space\\models\\Space', 5, 2, 12);
 
 -- --------------------------------------------------------
 
@@ -254,7 +270,6 @@ CREATE TABLE `group_user` (
 INSERT INTO `group_user` (`id`, `user_id`, `group_id`, `is_group_manager`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES
 (1, 1, 1, 0, '2016-08-17 00:16:24', NULL, '2016-08-17 00:16:24', NULL),
 (2, 2, 2, 0, '2016-08-17 01:07:50', 1, '2016-08-17 01:07:50', 1),
-(3, 3, 2, 0, '2016-08-17 02:27:10', NULL, '2016-08-17 02:27:10', NULL),
 (4, 4, 2, 0, '2016-08-17 02:32:40', NULL, '2016-08-17 02:32:40', NULL),
 (5, 5, 2, 0, '2016-08-17 03:08:32', NULL, '2016-08-17 03:08:32', NULL),
 (6, 6, 2, 0, '2016-08-17 03:52:11', NULL, '2016-08-17 03:52:11', NULL),
@@ -370,7 +385,11 @@ INSERT INTO `log` (`id`, `level`, `category`, `log_time`, `prefix`, `message`) V
 (67, 1, 'yii\\base\\ErrorException:8', 1471418919.3954, '[::1][-][d2jqo41r67cp5c69ofhhud6t04]', 'exception ''yii\\base\\ErrorException'' with message ''Undefined variable: typeForm'' in C:\\xampp\\htdocs\\portalweb\\protected\\humhub\\modules\\user\\controllers\\RegistrationController.php:98\nStack trace:\n#0 C:\\xampp\\htdocs\\portalweb\\protected\\humhub\\modules\\user\\controllers\\RegistrationController.php(98): yii\\base\\ErrorHandler->handleError(8, ''Undefined varia...'', ''C:\\\\xampp\\\\htdocs...'', 98, Array)\n#1 [internal function]: humhub\\modules\\user\\controllers\\RegistrationController->actionRegistration1()\n#2 C:\\xampp\\htdocs\\portalweb\\protected\\vendor\\yiisoft\\yii2\\base\\InlineAction.php(55): call_user_func_array(Array, Array)\n#3 C:\\xampp\\htdocs\\portalweb\\protected\\vendor\\yiisoft\\yii2\\base\\Controller.php(154): yii\\base\\InlineAction->runWithParams(Array)\n#4 C:\\xampp\\htdocs\\portalweb\\protected\\vendor\\yiisoft\\yii2\\base\\Module.php(454): yii\\base\\Controller->runAction(''registration1'', Array)\n#5 C:\\xampp\\htdocs\\portalweb\\protected\\vendor\\yiisoft\\yii2\\web\\Application.php(87): yii\\base\\Module->runAction(''user/registrati...'', Array)\n#6 C:\\xampp\\htdocs\\portalweb\\protected\\vendor\\yiisoft\\yii2\\base\\Application.php(375): yii\\web\\Application->handleRequest(Object(humhub\\components\\Request))\n#7 C:\\xampp\\htdocs\\portalweb\\index.php(25): yii\\base\\Application->run()\n#8 {main}'),
 (68, 4, 'application', 1471418919.2986, '[::1][-][d2jqo41r67cp5c69ofhhud6t04]', '$_GET = [\n    ''r'' => ''user/registration/registration1''\n]\n\n$_SERVER = [\n    ''MIBDIRS'' => ''C:/xampp/php/extras/mibs''\n    ''MYSQL_HOME'' => ''\\\\xampp\\\\mysql\\\\bin''\n    ''OPENSSL_CONF'' => ''C:/xampp/apache/bin/openssl.cnf''\n    ''PHP_PEAR_SYSCONF_DIR'' => ''\\\\xampp\\\\php''\n    ''PHPRC'' => ''\\\\xampp\\\\php''\n    ''TMP'' => ''\\\\xampp\\\\tmp''\n    ''HTTP_HOST'' => ''localhost''\n    ''HTTP_CONNECTION'' => ''keep-alive''\n    ''HTTP_CACHE_CONTROL'' => ''max-age=0''\n    ''HTTP_UPGRADE_INSECURE_REQUESTS'' => ''1''\n    ''HTTP_USER_AGENT'' => ''Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36''\n    ''HTTP_ACCEPT'' => ''text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8''\n    ''HTTP_ACCEPT_ENCODING'' => ''gzip, deflate, sdch''\n    ''HTTP_ACCEPT_LANGUAGE'' => ''es-ES,es;q=0.8''\n    ''HTTP_COOKIE'' => ''pm_new-people-panel=expanded; pm_new-spaces-panel=expanded; pm_user-statistics-panel=expanded; pm_spaces-statistics-panel=expanded; pm_getting-started-panel=expanded; _csrf=83bbcbf3a7bb27a4f3e46465cf92ad154109ba02ade2ca5e07c4355cb58bfc9ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22iaAmiYoPfZ1qXxww1IJ0m126OjWrIzOS%22%3B%7D; PHPSESSID=d2jqo41r67cp5c69ofhhud6t04; language=bc9cdfef269185ac1227de2026559ac7ebdcf2f62d54136ecf0f38f5ca783691a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22es%22%3B%7D''\n    ''PATH'' => ''C:\\\\Windows\\\\system32;C:\\\\Windows;C:\\\\Windows\\\\System32\\\\Wbem;C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\;C:\\\\Program Files (x86)\\\\Intel\\\\OpenCL SDK\\\\2.0\\\\bin\\\\x86;C:\\\\Program Files (x86)\\\\Intel\\\\OpenCL SDK\\\\2.0\\\\bin\\\\x64;C:\\\\xampp\\\\htdocs\\\\yii-1.1.14\\\\framework;C:\\\\xampp\\\\php;~\\\\.composer\\\\vendor\\\\bin\\\\;C:\\\\Program Files (x86)\\\\Microsoft ASP.NET\\\\ASP.NET Web Pages\\\\v1.0\\\\;C:\\\\Program Files (x86)\\\\Windows Kits\\\\8.0\\\\Windows Performance Toolkit\\\\;C:\\\\Program Files\\\\Microsoft SQL Server\\\\110\\\\Tools\\\\Binn\\\\;C:\\\\Program Files (x86)\\\\Java\\\\jdk1.7.0_15\\\\bin;C:\\\\Program Files\\\\Microsoft\\\\Web Platform Installer\\\\;C:\\\\Program Files (x86)\\\\Git\\\\cmd;C:\\\\ProgramData\\\\ComposerSetup\\\\bin;C:\\\\Program Files\\\\nodejs\\\\;C:\\\\Program Files\\\\Microsoft SQL Server\\\\120\\\\DTS\\\\Binn\\\\;C:\\\\Program Files\\\\Microsoft SQL Server\\\\Client SDK\\\\ODBC\\\\110\\\\Tools\\\\Binn\\\\;C:\\\\Program Files (x86)\\\\Microsoft SQL Server\\\\120\\\\Tools\\\\Binn\\\\;C:\\\\Program Files\\\\Microsoft SQL Server\\\\120\\\\Tools\\\\Binn\\\\;C:\\\\Program Files (x86)\\\\Microsoft SQL Server\\\\120\\\\Tools\\\\Binn\\\\ManagementStudio\\\\;C:\\\\Program Files (x86)\\\\Microsoft SQL Server\\\\120\\\\DTS\\\\Binn\\\\;C:\\\\Users\\\\JulyosCesar\\\\AppData\\\\Roaming\\\\npm;C:\\\\Users\\\\JulyosCesar\\\\AppData\\\\Local\\\\.meteor\\\\''\n    ''SystemRoot'' => ''C:\\\\Windows''\n    ''COMSPEC'' => ''C:\\\\Windows\\\\system32\\\\cmd.exe''\n    ''PATHEXT'' => ''.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC''\n    ''WINDIR'' => ''C:\\\\Windows''\n    ''SERVER_SIGNATURE'' => ''<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23 Server at localhost Port 80</address>\n''\n    ''SERVER_SOFTWARE'' => ''Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23''\n    ''SERVER_NAME'' => ''localhost''\n    ''SERVER_ADDR'' => ''::1''\n    ''SERVER_PORT'' => ''80''\n    ''REMOTE_ADDR'' => ''::1''\n    ''DOCUMENT_ROOT'' => ''C:/xampp/htdocs''\n    ''REQUEST_SCHEME'' => ''http''\n    ''CONTEXT_PREFIX'' => ''''\n    ''CONTEXT_DOCUMENT_ROOT'' => ''C:/xampp/htdocs''\n    ''SERVER_ADMIN'' => ''postmaster@localhost''\n    ''SCRIPT_FILENAME'' => ''C:/xampp/htdocs/portalweb/index.php''\n    ''REMOTE_PORT'' => ''60469''\n    ''GATEWAY_INTERFACE'' => ''CGI/1.1''\n    ''SERVER_PROTOCOL'' => ''HTTP/1.1''\n    ''REQUEST_METHOD'' => ''GET''\n    ''QUERY_STRING'' => ''r=user%2Fregistration%2Fregistration1''\n    ''REQUEST_URI'' => ''/portalweb/index.php?r=user%2Fregistration%2Fregistration1''\n    ''SCRIPT_NAME'' => ''/portalweb/index.php''\n    ''PHP_SELF'' => ''/portalweb/index.php''\n    ''REQUEST_TIME_FLOAT'' => 1471418919.282\n    ''REQUEST_TIME'' => 1471418919\n]'),
 (69, 1, 'yii\\web\\HttpException:401', 1471420337.3376, '[::1][6][mp76vkh59tp00u5p1tck67omm0]', 'exception ''yii\\web\\HttpException'' with message ''Your are already logged in! - Logout first!'' in C:\\xampp\\htdocs\\portalweb\\protected\\humhub\\modules\\user\\controllers\\RegistrationController.php:45\nStack trace:\n#0 C:\\xampp\\htdocs\\portalweb\\protected\\vendor\\yiisoft\\yii2\\base\\Controller.php(152): humhub\\modules\\user\\controllers\\RegistrationController->beforeAction(Object(yii\\base\\InlineAction))\n#1 C:\\xampp\\htdocs\\portalweb\\protected\\vendor\\yiisoft\\yii2\\base\\Module.php(454): yii\\base\\Controller->runAction(''registration1'', Array)\n#2 C:\\xampp\\htdocs\\portalweb\\protected\\vendor\\yiisoft\\yii2\\web\\Application.php(87): yii\\base\\Module->runAction(''user/registrati...'', Array)\n#3 C:\\xampp\\htdocs\\portalweb\\protected\\vendor\\yiisoft\\yii2\\base\\Application.php(375): yii\\web\\Application->handleRequest(Object(humhub\\components\\Request))\n#4 C:\\xampp\\htdocs\\portalweb\\index.php(25): yii\\base\\Application->run()\n#5 {main}'),
-(70, 4, 'application', 1471420337.2374, '[::1][6][mp76vkh59tp00u5p1tck67omm0]', '$_GET = [\n    ''r'' => ''user/registration/registration1''\n]\n\n$_SERVER = [\n    ''MIBDIRS'' => ''C:/xampp/php/extras/mibs''\n    ''MYSQL_HOME'' => ''\\\\xampp\\\\mysql\\\\bin''\n    ''OPENSSL_CONF'' => ''C:/xampp/apache/bin/openssl.cnf''\n    ''PHP_PEAR_SYSCONF_DIR'' => ''\\\\xampp\\\\php''\n    ''PHPRC'' => ''\\\\xampp\\\\php''\n    ''TMP'' => ''\\\\xampp\\\\tmp''\n    ''HTTP_HOST'' => ''localhost''\n    ''HTTP_CONNECTION'' => ''keep-alive''\n    ''HTTP_UPGRADE_INSECURE_REQUESTS'' => ''1''\n    ''HTTP_USER_AGENT'' => ''Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36''\n    ''HTTP_ACCEPT'' => ''text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8''\n    ''HTTP_REFERER'' => ''http://localhost/portalweb/index.php''\n    ''HTTP_ACCEPT_ENCODING'' => ''gzip, deflate, sdch''\n    ''HTTP_ACCEPT_LANGUAGE'' => ''es-ES,es;q=0.8''\n    ''HTTP_COOKIE'' => ''pm_user-tags-panel=expanded; pm_user-spaces-panel=expanded; pm_getting-started-panel=expanded; pm_new-people-panel=expanded; pm_new-spaces-panel=expanded; _csrf=f3c6311b93d5e0bdf76e1568c08e25c5f13df78287cebac197de98325f565883a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22TJLFtiojTeGt_dF4VGvQowgT_1pmvtbi%22%3B%7D; PHPSESSID=mp76vkh59tp00u5p1tck67omm0''\n    ''PATH'' => ''C:\\\\Windows\\\\system32;C:\\\\Windows;C:\\\\Windows\\\\System32\\\\Wbem;C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\;C:\\\\Program Files (x86)\\\\Intel\\\\OpenCL SDK\\\\2.0\\\\bin\\\\x86;C:\\\\Program Files (x86)\\\\Intel\\\\OpenCL SDK\\\\2.0\\\\bin\\\\x64;C:\\\\xampp\\\\htdocs\\\\yii-1.1.14\\\\framework;C:\\\\xampp\\\\php;~\\\\.composer\\\\vendor\\\\bin\\\\;C:\\\\Program Files (x86)\\\\Microsoft ASP.NET\\\\ASP.NET Web Pages\\\\v1.0\\\\;C:\\\\Program Files (x86)\\\\Windows Kits\\\\8.0\\\\Windows Performance Toolkit\\\\;C:\\\\Program Files\\\\Microsoft SQL Server\\\\110\\\\Tools\\\\Binn\\\\;C:\\\\Program Files (x86)\\\\Java\\\\jdk1.7.0_15\\\\bin;C:\\\\Program Files\\\\Microsoft\\\\Web Platform Installer\\\\;C:\\\\Program Files (x86)\\\\Git\\\\cmd;C:\\\\ProgramData\\\\ComposerSetup\\\\bin;C:\\\\Program Files\\\\nodejs\\\\;C:\\\\Program Files\\\\Microsoft SQL Server\\\\120\\\\DTS\\\\Binn\\\\;C:\\\\Program Files\\\\Microsoft SQL Server\\\\Client SDK\\\\ODBC\\\\110\\\\Tools\\\\Binn\\\\;C:\\\\Program Files (x86)\\\\Microsoft SQL Server\\\\120\\\\Tools\\\\Binn\\\\;C:\\\\Program Files\\\\Microsoft SQL Server\\\\120\\\\Tools\\\\Binn\\\\;C:\\\\Program Files (x86)\\\\Microsoft SQL Server\\\\120\\\\Tools\\\\Binn\\\\ManagementStudio\\\\;C:\\\\Program Files (x86)\\\\Microsoft SQL Server\\\\120\\\\DTS\\\\Binn\\\\;C:\\\\Users\\\\JulyosCesar\\\\AppData\\\\Roaming\\\\npm;C:\\\\Users\\\\JulyosCesar\\\\AppData\\\\Local\\\\.meteor\\\\''\n    ''SystemRoot'' => ''C:\\\\Windows''\n    ''COMSPEC'' => ''C:\\\\Windows\\\\system32\\\\cmd.exe''\n    ''PATHEXT'' => ''.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC''\n    ''WINDIR'' => ''C:\\\\Windows''\n    ''SERVER_SIGNATURE'' => ''<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23 Server at localhost Port 80</address>\n''\n    ''SERVER_SOFTWARE'' => ''Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23''\n    ''SERVER_NAME'' => ''localhost''\n    ''SERVER_ADDR'' => ''::1''\n    ''SERVER_PORT'' => ''80''\n    ''REMOTE_ADDR'' => ''::1''\n    ''DOCUMENT_ROOT'' => ''C:/xampp/htdocs''\n    ''REQUEST_SCHEME'' => ''http''\n    ''CONTEXT_PREFIX'' => ''''\n    ''CONTEXT_DOCUMENT_ROOT'' => ''C:/xampp/htdocs''\n    ''SERVER_ADMIN'' => ''postmaster@localhost''\n    ''SCRIPT_FILENAME'' => ''C:/xampp/htdocs/portalweb/index.php''\n    ''REMOTE_PORT'' => ''60739''\n    ''GATEWAY_INTERFACE'' => ''CGI/1.1''\n    ''SERVER_PROTOCOL'' => ''HTTP/1.1''\n    ''REQUEST_METHOD'' => ''GET''\n    ''QUERY_STRING'' => ''r=user%2Fregistration%2Fregistration1''\n    ''REQUEST_URI'' => ''/portalweb/index.php?r=user%2Fregistration%2Fregistration1''\n    ''SCRIPT_NAME'' => ''/portalweb/index.php''\n    ''PHP_SELF'' => ''/portalweb/index.php''\n    ''REQUEST_TIME_FLOAT'' => 1471420337.232\n    ''REQUEST_TIME'' => 1471420337\n]');
+(70, 4, 'application', 1471420337.2374, '[::1][6][mp76vkh59tp00u5p1tck67omm0]', '$_GET = [\n    ''r'' => ''user/registration/registration1''\n]\n\n$_SERVER = [\n    ''MIBDIRS'' => ''C:/xampp/php/extras/mibs''\n    ''MYSQL_HOME'' => ''\\\\xampp\\\\mysql\\\\bin''\n    ''OPENSSL_CONF'' => ''C:/xampp/apache/bin/openssl.cnf''\n    ''PHP_PEAR_SYSCONF_DIR'' => ''\\\\xampp\\\\php''\n    ''PHPRC'' => ''\\\\xampp\\\\php''\n    ''TMP'' => ''\\\\xampp\\\\tmp''\n    ''HTTP_HOST'' => ''localhost''\n    ''HTTP_CONNECTION'' => ''keep-alive''\n    ''HTTP_UPGRADE_INSECURE_REQUESTS'' => ''1''\n    ''HTTP_USER_AGENT'' => ''Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36''\n    ''HTTP_ACCEPT'' => ''text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8''\n    ''HTTP_REFERER'' => ''http://localhost/portalweb/index.php''\n    ''HTTP_ACCEPT_ENCODING'' => ''gzip, deflate, sdch''\n    ''HTTP_ACCEPT_LANGUAGE'' => ''es-ES,es;q=0.8''\n    ''HTTP_COOKIE'' => ''pm_user-tags-panel=expanded; pm_user-spaces-panel=expanded; pm_getting-started-panel=expanded; pm_new-people-panel=expanded; pm_new-spaces-panel=expanded; _csrf=f3c6311b93d5e0bdf76e1568c08e25c5f13df78287cebac197de98325f565883a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22TJLFtiojTeGt_dF4VGvQowgT_1pmvtbi%22%3B%7D; PHPSESSID=mp76vkh59tp00u5p1tck67omm0''\n    ''PATH'' => ''C:\\\\Windows\\\\system32;C:\\\\Windows;C:\\\\Windows\\\\System32\\\\Wbem;C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\;C:\\\\Program Files (x86)\\\\Intel\\\\OpenCL SDK\\\\2.0\\\\bin\\\\x86;C:\\\\Program Files (x86)\\\\Intel\\\\OpenCL SDK\\\\2.0\\\\bin\\\\x64;C:\\\\xampp\\\\htdocs\\\\yii-1.1.14\\\\framework;C:\\\\xampp\\\\php;~\\\\.composer\\\\vendor\\\\bin\\\\;C:\\\\Program Files (x86)\\\\Microsoft ASP.NET\\\\ASP.NET Web Pages\\\\v1.0\\\\;C:\\\\Program Files (x86)\\\\Windows Kits\\\\8.0\\\\Windows Performance Toolkit\\\\;C:\\\\Program Files\\\\Microsoft SQL Server\\\\110\\\\Tools\\\\Binn\\\\;C:\\\\Program Files (x86)\\\\Java\\\\jdk1.7.0_15\\\\bin;C:\\\\Program Files\\\\Microsoft\\\\Web Platform Installer\\\\;C:\\\\Program Files (x86)\\\\Git\\\\cmd;C:\\\\ProgramData\\\\ComposerSetup\\\\bin;C:\\\\Program Files\\\\nodejs\\\\;C:\\\\Program Files\\\\Microsoft SQL Server\\\\120\\\\DTS\\\\Binn\\\\;C:\\\\Program Files\\\\Microsoft SQL Server\\\\Client SDK\\\\ODBC\\\\110\\\\Tools\\\\Binn\\\\;C:\\\\Program Files (x86)\\\\Microsoft SQL Server\\\\120\\\\Tools\\\\Binn\\\\;C:\\\\Program Files\\\\Microsoft SQL Server\\\\120\\\\Tools\\\\Binn\\\\;C:\\\\Program Files (x86)\\\\Microsoft SQL Server\\\\120\\\\Tools\\\\Binn\\\\ManagementStudio\\\\;C:\\\\Program Files (x86)\\\\Microsoft SQL Server\\\\120\\\\DTS\\\\Binn\\\\;C:\\\\Users\\\\JulyosCesar\\\\AppData\\\\Roaming\\\\npm;C:\\\\Users\\\\JulyosCesar\\\\AppData\\\\Local\\\\.meteor\\\\''\n    ''SystemRoot'' => ''C:\\\\Windows''\n    ''COMSPEC'' => ''C:\\\\Windows\\\\system32\\\\cmd.exe''\n    ''PATHEXT'' => ''.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC''\n    ''WINDIR'' => ''C:\\\\Windows''\n    ''SERVER_SIGNATURE'' => ''<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23 Server at localhost Port 80</address>\n''\n    ''SERVER_SOFTWARE'' => ''Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23''\n    ''SERVER_NAME'' => ''localhost''\n    ''SERVER_ADDR'' => ''::1''\n    ''SERVER_PORT'' => ''80''\n    ''REMOTE_ADDR'' => ''::1''\n    ''DOCUMENT_ROOT'' => ''C:/xampp/htdocs''\n    ''REQUEST_SCHEME'' => ''http''\n    ''CONTEXT_PREFIX'' => ''''\n    ''CONTEXT_DOCUMENT_ROOT'' => ''C:/xampp/htdocs''\n    ''SERVER_ADMIN'' => ''postmaster@localhost''\n    ''SCRIPT_FILENAME'' => ''C:/xampp/htdocs/portalweb/index.php''\n    ''REMOTE_PORT'' => ''60739''\n    ''GATEWAY_INTERFACE'' => ''CGI/1.1''\n    ''SERVER_PROTOCOL'' => ''HTTP/1.1''\n    ''REQUEST_METHOD'' => ''GET''\n    ''QUERY_STRING'' => ''r=user%2Fregistration%2Fregistration1''\n    ''REQUEST_URI'' => ''/portalweb/index.php?r=user%2Fregistration%2Fregistration1''\n    ''SCRIPT_NAME'' => ''/portalweb/index.php''\n    ''PHP_SELF'' => ''/portalweb/index.php''\n    ''REQUEST_TIME_FLOAT'' => 1471420337.232\n    ''REQUEST_TIME'' => 1471420337\n]'),
+(71, 1, 'yii\\web\\HttpException:401', 1471427828.3882, '[::1][-][-]', 'exception ''yii\\web\\HttpException'' with message ''¡Necesitas iniciar sesión para ver los contenidos de este espacio!'' in C:\\xampp\\htdocs\\portalweb\\protected\\humhub\\modules\\space\\behaviors\\SpaceController.php:81\nStack trace:\n#0 [internal function]: humhub\\modules\\space\\behaviors\\SpaceController->checkAccess()\n#1 C:\\xampp\\htdocs\\portalweb\\protected\\vendor\\yiisoft\\yii2\\base\\Component.php(282): call_user_func_array(Array, Array)\n#2 C:\\xampp\\htdocs\\portalweb\\protected\\humhub\\modules\\content\\components\\ContentContainerController.php(137): yii\\base\\Component->__call(''checkAccess'', Array)\n#3 C:\\xampp\\htdocs\\portalweb\\protected\\humhub\\modules\\content\\components\\ContentContainerController.php(137): humhub\\modules\\space\\controllers\\SpaceController->checkAccess()\n#4 C:\\xampp\\htdocs\\portalweb\\protected\\humhub\\modules\\content\\components\\ContentContainerController.php(97): humhub\\modules\\content\\components\\ContentContainerController->checkContainerAccess()\n#5 C:\\xampp\\htdocs\\portalweb\\protected\\vendor\\yiisoft\\yii2\\base\\Object.php(107): humhub\\modules\\content\\components\\ContentContainerController->init()\n#6 C:\\xampp\\htdocs\\portalweb\\protected\\vendor\\yiisoft\\yii2\\base\\Controller.php(84): yii\\base\\Object->__construct(Array)\n#7 [internal function]: yii\\base\\Controller->__construct(''space'', Object(humhub\\modules\\space\\Module), Array)\n#8 C:\\xampp\\htdocs\\portalweb\\protected\\vendor\\yiisoft\\yii2\\di\\Container.php(373): ReflectionClass->newInstanceArgs(Array)\n#9 C:\\xampp\\htdocs\\portalweb\\protected\\vendor\\yiisoft\\yii2\\di\\Container.php(154): yii\\di\\Container->build(''humhub\\\\modules\\\\...'', Array, Array)\n#10 C:\\xampp\\htdocs\\portalweb\\protected\\vendor\\yiisoft\\yii2\\BaseYii.php(340): yii\\di\\Container->get(''humhub\\\\modules\\\\...'', Array)\n#11 C:\\xampp\\htdocs\\portalweb\\protected\\vendor\\yiisoft\\yii2\\base\\Module.php(567): yii\\BaseYii::createObject(''humhub\\\\modules\\\\...'', Array)\n#12 C:\\xampp\\htdocs\\portalweb\\protected\\vendor\\yiisoft\\yii2\\base\\Module.php(520): yii\\base\\Module->createControllerByID(''space'')\n#13 C:\\xampp\\htdocs\\portalweb\\protected\\vendor\\yiisoft\\yii2\\base\\Module.php(512): yii\\base\\Module->createController(''space'')\n#14 C:\\xampp\\htdocs\\portalweb\\protected\\vendor\\yiisoft\\yii2\\base\\Module.php(448): yii\\base\\Module->createController(''space/space'')\n#15 C:\\xampp\\htdocs\\portalweb\\protected\\vendor\\yiisoft\\yii2\\web\\Application.php(87): yii\\base\\Module->runAction(''space/space'', Array)\n#16 C:\\xampp\\htdocs\\portalweb\\protected\\vendor\\yiisoft\\yii2\\base\\Application.php(375): yii\\web\\Application->handleRequest(Object(humhub\\components\\Request))\n#17 C:\\xampp\\htdocs\\portalweb\\index.php(25): yii\\base\\Application->run()\n#18 {main}'),
+(72, 4, 'application', 1471427828.2672, '[::1][-][-]', '$_GET = [\n    ''r'' => ''space/space''\n    ''sguid'' => ''efc613df-7a03-4c7f-a63c-f8e02485f3ed''\n]\n\n$_SERVER = [\n    ''MIBDIRS'' => ''C:/xampp/php/extras/mibs''\n    ''MYSQL_HOME'' => ''\\\\xampp\\\\mysql\\\\bin''\n    ''OPENSSL_CONF'' => ''C:/xampp/apache/bin/openssl.cnf''\n    ''PHP_PEAR_SYSCONF_DIR'' => ''\\\\xampp\\\\php''\n    ''PHPRC'' => ''\\\\xampp\\\\php''\n    ''TMP'' => ''\\\\xampp\\\\tmp''\n    ''HTTP_HOST'' => ''localhost''\n    ''HTTP_CONNECTION'' => ''keep-alive''\n    ''HTTP_UPGRADE_INSECURE_REQUESTS'' => ''1''\n    ''HTTP_USER_AGENT'' => ''Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36''\n    ''HTTP_ACCEPT'' => ''text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8''\n    ''HTTP_ACCEPT_ENCODING'' => ''gzip, deflate, sdch''\n    ''HTTP_ACCEPT_LANGUAGE'' => ''es-ES,es;q=0.8''\n    ''PATH'' => ''C:\\\\Windows\\\\system32;C:\\\\Windows;C:\\\\Windows\\\\System32\\\\Wbem;C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\;C:\\\\Program Files (x86)\\\\Intel\\\\OpenCL SDK\\\\2.0\\\\bin\\\\x86;C:\\\\Program Files (x86)\\\\Intel\\\\OpenCL SDK\\\\2.0\\\\bin\\\\x64;C:\\\\xampp\\\\htdocs\\\\yii-1.1.14\\\\framework;C:\\\\xampp\\\\php;~\\\\.composer\\\\vendor\\\\bin\\\\;C:\\\\Program Files (x86)\\\\Microsoft ASP.NET\\\\ASP.NET Web Pages\\\\v1.0\\\\;C:\\\\Program Files (x86)\\\\Windows Kits\\\\8.0\\\\Windows Performance Toolkit\\\\;C:\\\\Program Files\\\\Microsoft SQL Server\\\\110\\\\Tools\\\\Binn\\\\;C:\\\\Program Files (x86)\\\\Java\\\\jdk1.7.0_15\\\\bin;C:\\\\Program Files\\\\Microsoft\\\\Web Platform Installer\\\\;C:\\\\Program Files (x86)\\\\Git\\\\cmd;C:\\\\ProgramData\\\\ComposerSetup\\\\bin;C:\\\\Program Files\\\\nodejs\\\\;C:\\\\Program Files\\\\Microsoft SQL Server\\\\120\\\\DTS\\\\Binn\\\\;C:\\\\Program Files\\\\Microsoft SQL Server\\\\Client SDK\\\\ODBC\\\\110\\\\Tools\\\\Binn\\\\;C:\\\\Program Files (x86)\\\\Microsoft SQL Server\\\\120\\\\Tools\\\\Binn\\\\;C:\\\\Program Files\\\\Microsoft SQL Server\\\\120\\\\Tools\\\\Binn\\\\;C:\\\\Program Files (x86)\\\\Microsoft SQL Server\\\\120\\\\Tools\\\\Binn\\\\ManagementStudio\\\\;C:\\\\Program Files (x86)\\\\Microsoft SQL Server\\\\120\\\\DTS\\\\Binn\\\\;C:\\\\Users\\\\JulyosCesar\\\\AppData\\\\Roaming\\\\npm;C:\\\\Users\\\\JulyosCesar\\\\AppData\\\\Local\\\\.meteor\\\\''\n    ''SystemRoot'' => ''C:\\\\Windows''\n    ''COMSPEC'' => ''C:\\\\Windows\\\\system32\\\\cmd.exe''\n    ''PATHEXT'' => ''.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC''\n    ''WINDIR'' => ''C:\\\\Windows''\n    ''SERVER_SIGNATURE'' => ''<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23 Server at localhost Port 80</address>\n''\n    ''SERVER_SOFTWARE'' => ''Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23''\n    ''SERVER_NAME'' => ''localhost''\n    ''SERVER_ADDR'' => ''::1''\n    ''SERVER_PORT'' => ''80''\n    ''REMOTE_ADDR'' => ''::1''\n    ''DOCUMENT_ROOT'' => ''C:/xampp/htdocs''\n    ''REQUEST_SCHEME'' => ''http''\n    ''CONTEXT_PREFIX'' => ''''\n    ''CONTEXT_DOCUMENT_ROOT'' => ''C:/xampp/htdocs''\n    ''SERVER_ADMIN'' => ''postmaster@localhost''\n    ''SCRIPT_FILENAME'' => ''C:/xampp/htdocs/portalweb/index.php''\n    ''REMOTE_PORT'' => ''62311''\n    ''GATEWAY_INTERFACE'' => ''CGI/1.1''\n    ''SERVER_PROTOCOL'' => ''HTTP/1.1''\n    ''REQUEST_METHOD'' => ''GET''\n    ''QUERY_STRING'' => ''r=space%2Fspace&sguid=efc613df-7a03-4c7f-a63c-f8e02485f3ed''\n    ''REQUEST_URI'' => ''/portalweb/index.php?r=space%2Fspace&sguid=efc613df-7a03-4c7f-a63c-f8e02485f3ed''\n    ''SCRIPT_NAME'' => ''/portalweb/index.php''\n    ''PHP_SELF'' => ''/portalweb/index.php''\n    ''REQUEST_TIME_FLOAT'' => 1471427828.263\n    ''REQUEST_TIME'' => 1471427828\n]'),
+(73, 1, 'yii\\web\\HttpException:401', 1471429725.6983, '[::1][-][goncpbmdbleuldv6hg38io8tr7]', 'exception ''yii\\web\\HttpException'' with message ''¡Necesitas iniciar sesión para ver los contenidos de este espacio!'' in C:\\xampp\\htdocs\\portalweb\\protected\\humhub\\modules\\space\\behaviors\\SpaceController.php:81\nStack trace:\n#0 [internal function]: humhub\\modules\\space\\behaviors\\SpaceController->checkAccess()\n#1 C:\\xampp\\htdocs\\portalweb\\protected\\vendor\\yiisoft\\yii2\\base\\Component.php(282): call_user_func_array(Array, Array)\n#2 C:\\xampp\\htdocs\\portalweb\\protected\\humhub\\modules\\content\\components\\ContentContainerController.php(137): yii\\base\\Component->__call(''checkAccess'', Array)\n#3 C:\\xampp\\htdocs\\portalweb\\protected\\humhub\\modules\\content\\components\\ContentContainerController.php(137): humhub\\modules\\space\\controllers\\SpaceController->checkAccess()\n#4 C:\\xampp\\htdocs\\portalweb\\protected\\humhub\\modules\\content\\components\\ContentContainerController.php(97): humhub\\modules\\content\\components\\ContentContainerController->checkContainerAccess()\n#5 C:\\xampp\\htdocs\\portalweb\\protected\\vendor\\yiisoft\\yii2\\base\\Object.php(107): humhub\\modules\\content\\components\\ContentContainerController->init()\n#6 C:\\xampp\\htdocs\\portalweb\\protected\\vendor\\yiisoft\\yii2\\base\\Controller.php(84): yii\\base\\Object->__construct(Array)\n#7 [internal function]: yii\\base\\Controller->__construct(''space'', Object(humhub\\modules\\space\\Module), Array)\n#8 C:\\xampp\\htdocs\\portalweb\\protected\\vendor\\yiisoft\\yii2\\di\\Container.php(373): ReflectionClass->newInstanceArgs(Array)\n#9 C:\\xampp\\htdocs\\portalweb\\protected\\vendor\\yiisoft\\yii2\\di\\Container.php(154): yii\\di\\Container->build(''humhub\\\\modules\\\\...'', Array, Array)\n#10 C:\\xampp\\htdocs\\portalweb\\protected\\vendor\\yiisoft\\yii2\\BaseYii.php(340): yii\\di\\Container->get(''humhub\\\\modules\\\\...'', Array)\n#11 C:\\xampp\\htdocs\\portalweb\\protected\\vendor\\yiisoft\\yii2\\base\\Module.php(567): yii\\BaseYii::createObject(''humhub\\\\modules\\\\...'', Array)\n#12 C:\\xampp\\htdocs\\portalweb\\protected\\vendor\\yiisoft\\yii2\\base\\Module.php(520): yii\\base\\Module->createControllerByID(''space'')\n#13 C:\\xampp\\htdocs\\portalweb\\protected\\vendor\\yiisoft\\yii2\\base\\Module.php(512): yii\\base\\Module->createController(''space'')\n#14 C:\\xampp\\htdocs\\portalweb\\protected\\vendor\\yiisoft\\yii2\\base\\Module.php(448): yii\\base\\Module->createController(''space/space'')\n#15 C:\\xampp\\htdocs\\portalweb\\protected\\vendor\\yiisoft\\yii2\\web\\Application.php(87): yii\\base\\Module->runAction(''space/space'', Array)\n#16 C:\\xampp\\htdocs\\portalweb\\protected\\vendor\\yiisoft\\yii2\\base\\Application.php(375): yii\\web\\Application->handleRequest(Object(humhub\\components\\Request))\n#17 C:\\xampp\\htdocs\\portalweb\\index.php(25): yii\\base\\Application->run()\n#18 {main}'),
+(74, 4, 'application', 1471429725.5963, '[::1][-][goncpbmdbleuldv6hg38io8tr7]', '$_GET = [\n    ''r'' => ''space/space''\n    ''sguid'' => ''b6eed4b4-5e87-42e5-86ab-aa92287cf0d8''\n]\n\n$_SERVER = [\n    ''MIBDIRS'' => ''C:/xampp/php/extras/mibs''\n    ''MYSQL_HOME'' => ''\\\\xampp\\\\mysql\\\\bin''\n    ''OPENSSL_CONF'' => ''C:/xampp/apache/bin/openssl.cnf''\n    ''PHP_PEAR_SYSCONF_DIR'' => ''\\\\xampp\\\\php''\n    ''PHPRC'' => ''\\\\xampp\\\\php''\n    ''TMP'' => ''\\\\xampp\\\\tmp''\n    ''HTTP_HOST'' => ''localhost''\n    ''HTTP_CONNECTION'' => ''keep-alive''\n    ''HTTP_UPGRADE_INSECURE_REQUESTS'' => ''1''\n    ''HTTP_USER_AGENT'' => ''Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36''\n    ''HTTP_ACCEPT'' => ''text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8''\n    ''HTTP_REFERER'' => ''http://localhost/portalweb/index.php?r=search%2Fsearch%2Findex&keyword=autismo&limitSpaceGuids=''\n    ''HTTP_ACCEPT_ENCODING'' => ''gzip, deflate, sdch''\n    ''HTTP_ACCEPT_LANGUAGE'' => ''es-ES,es;q=0.8''\n    ''HTTP_COOKIE'' => ''pm_user-spaces-panel=expanded; pm_new-people-panel=expanded; pm_new-spaces-panel=expanded; pm_spaces-statistics-panel=expanded; _csrf=dd37e1b1e40146921c0b2de41fa41045dceb1e58fc36d2c28de4373e32e6ced4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22rGrfnh08W35zdIplCKSeZBpxY2EVcYyw%22%3B%7D; PHPSESSID=goncpbmdbleuldv6hg38io8tr7; language=bc9cdfef269185ac1227de2026559ac7ebdcf2f62d54136ecf0f38f5ca783691a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22es%22%3B%7D''\n    ''PATH'' => ''C:\\\\Windows\\\\system32;C:\\\\Windows;C:\\\\Windows\\\\System32\\\\Wbem;C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\;C:\\\\Program Files (x86)\\\\Intel\\\\OpenCL SDK\\\\2.0\\\\bin\\\\x86;C:\\\\Program Files (x86)\\\\Intel\\\\OpenCL SDK\\\\2.0\\\\bin\\\\x64;C:\\\\xampp\\\\htdocs\\\\yii-1.1.14\\\\framework;C:\\\\xampp\\\\php;~\\\\.composer\\\\vendor\\\\bin\\\\;C:\\\\Program Files (x86)\\\\Microsoft ASP.NET\\\\ASP.NET Web Pages\\\\v1.0\\\\;C:\\\\Program Files (x86)\\\\Windows Kits\\\\8.0\\\\Windows Performance Toolkit\\\\;C:\\\\Program Files\\\\Microsoft SQL Server\\\\110\\\\Tools\\\\Binn\\\\;C:\\\\Program Files (x86)\\\\Java\\\\jdk1.7.0_15\\\\bin;C:\\\\Program Files\\\\Microsoft\\\\Web Platform Installer\\\\;C:\\\\Program Files (x86)\\\\Git\\\\cmd;C:\\\\ProgramData\\\\ComposerSetup\\\\bin;C:\\\\Program Files\\\\nodejs\\\\;C:\\\\Program Files\\\\Microsoft SQL Server\\\\120\\\\DTS\\\\Binn\\\\;C:\\\\Program Files\\\\Microsoft SQL Server\\\\Client SDK\\\\ODBC\\\\110\\\\Tools\\\\Binn\\\\;C:\\\\Program Files (x86)\\\\Microsoft SQL Server\\\\120\\\\Tools\\\\Binn\\\\;C:\\\\Program Files\\\\Microsoft SQL Server\\\\120\\\\Tools\\\\Binn\\\\;C:\\\\Program Files (x86)\\\\Microsoft SQL Server\\\\120\\\\Tools\\\\Binn\\\\ManagementStudio\\\\;C:\\\\Program Files (x86)\\\\Microsoft SQL Server\\\\120\\\\DTS\\\\Binn\\\\;C:\\\\Users\\\\JulyosCesar\\\\AppData\\\\Roaming\\\\npm;C:\\\\Users\\\\JulyosCesar\\\\AppData\\\\Local\\\\.meteor\\\\''\n    ''SystemRoot'' => ''C:\\\\Windows''\n    ''COMSPEC'' => ''C:\\\\Windows\\\\system32\\\\cmd.exe''\n    ''PATHEXT'' => ''.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC''\n    ''WINDIR'' => ''C:\\\\Windows''\n    ''SERVER_SIGNATURE'' => ''<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23 Server at localhost Port 80</address>\n''\n    ''SERVER_SOFTWARE'' => ''Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23''\n    ''SERVER_NAME'' => ''localhost''\n    ''SERVER_ADDR'' => ''::1''\n    ''SERVER_PORT'' => ''80''\n    ''REMOTE_ADDR'' => ''::1''\n    ''DOCUMENT_ROOT'' => ''C:/xampp/htdocs''\n    ''REQUEST_SCHEME'' => ''http''\n    ''CONTEXT_PREFIX'' => ''''\n    ''CONTEXT_DOCUMENT_ROOT'' => ''C:/xampp/htdocs''\n    ''SERVER_ADMIN'' => ''postmaster@localhost''\n    ''SCRIPT_FILENAME'' => ''C:/xampp/htdocs/portalweb/index.php''\n    ''REMOTE_PORT'' => ''62957''\n    ''GATEWAY_INTERFACE'' => ''CGI/1.1''\n    ''SERVER_PROTOCOL'' => ''HTTP/1.1''\n    ''REQUEST_METHOD'' => ''GET''\n    ''QUERY_STRING'' => ''r=space%2Fspace&sguid=b6eed4b4-5e87-42e5-86ab-aa92287cf0d8''\n    ''REQUEST_URI'' => ''/portalweb/index.php?r=space%2Fspace&sguid=b6eed4b4-5e87-42e5-86ab-aa92287cf0d8''\n    ''SCRIPT_NAME'' => ''/portalweb/index.php''\n    ''PHP_SELF'' => ''/portalweb/index.php''\n    ''REQUEST_TIME_FLOAT'' => 1471429725.591\n    ''REQUEST_TIME'' => 1471429725\n]');
 
 -- --------------------------------------------------------
 
@@ -524,6 +543,14 @@ CREATE TABLE `notification` (
   `group_key` varchar(75) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Volcado de datos para la tabla `notification`
+--
+
+INSERT INTO `notification` (`id`, `class`, `user_id`, `seen`, `source_class`, `source_pk`, `space_id`, `emailed`, `created_at`, `desktop_notified`, `originator_user_id`, `module`, `group_key`) VALUES
+(2, 'humhub\\modules\\space\\notifications\\InviteAccepted', 2, 0, 'humhub\\modules\\space\\models\\Space', 5, 5, 0, '2016-08-17 06:00:21', 1, 1, 'space', NULL),
+(4, 'humhub\\modules\\space\\notifications\\InviteAccepted', 1, 0, 'humhub\\modules\\space\\models\\Space', 2, 2, 0, '2016-08-17 06:25:37', 1, 2, 'space', NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -546,7 +573,8 @@ CREATE TABLE `post` (
 --
 
 INSERT INTO `post` (`id`, `message_2trash`, `message`, `url`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES
-(1, NULL, 'Yay! I''ve just installed HumHub ;Cool;', NULL, '2016-08-17 00:16:26', 1, '2016-08-17 00:16:26', 1);
+(2, NULL, 'hola', NULL, '2016-08-17 05:00:24', 1, '2016-08-17 05:00:24', 1),
+(3, NULL, 'jkfshdfjkhsd\r\nsdfsdjfhsdf\r\n\r\n', NULL, '2016-08-17 05:43:39', 1, '2016-08-17 05:43:39', 1);
 
 -- --------------------------------------------------------
 
@@ -596,7 +624,6 @@ CREATE TABLE `profile` (
 INSERT INTO `profile` (`user_id`, `firstname`, `lastname`, `title`, `gender`, `street`, `zip`, `city`, `country`, `state`, `birthday_hide_year`, `birthday`, `about`, `phone_private`, `phone_work`, `mobile`, `fax`, `im_skype`, `im_msn`, `im_xmpp`, `url`, `url_facebook`, `url_linkedin`, `url_xing`, `url_youtube`, `url_vimeo`, `url_flickr`, `url_myspace`, `url_googleplus`, `url_twitter`, `ce_nombre_especializado`, `ce_descripcion`) VALUES
 (1, 'admin', 'admin', 'System Administration', NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (2, 'test', 'test', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(3, 'test2', 'test2', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'test2', 'test2'),
 (4, 'test3', 'test3', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'test3', 'test3'),
 (5, NULL, NULL, NULL, NULL, 'centro', NULL, 'centro', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '454545', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'centro', 'centro'),
 (6, NULL, NULL, NULL, NULL, 'centro2', NULL, 'centro2', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'centro2', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'centro2', 'centro2'),
@@ -637,20 +664,20 @@ CREATE TABLE `profile_field` (
 --
 
 INSERT INTO `profile_field` (`id`, `profile_field_category_id`, `module_id`, `field_type_class`, `field_type_config`, `internal_name`, `title`, `description`, `sort_order`, `required`, `show_at_registration`, `editable`, `visible`, `created_at`, `created_by`, `updated_at`, `updated_by`, `ldap_attribute`, `translation_category`, `is_system`, `searchable`) VALUES
-(1, 1, NULL, 'humhub\\modules\\user\\models\\fieldtype\\Text', '{"minLength":"","maxLength":"20","validator":"","default":"","regexp":"","regexpErrorMessage":"","fieldTypes":[]}', 'firstname', 'First name', '', 100, 0, 1, 1, 1, NULL, NULL, NULL, NULL, 'givenName', 'UserModule.models_Profile', 1, 1),
-(2, 1, NULL, 'humhub\\modules\\user\\models\\fieldtype\\Text', '{"minLength":"","maxLength":"30","validator":"","default":"","regexp":"","regexpErrorMessage":"","fieldTypes":[]}', 'lastname', 'Last name', '', 200, 0, 1, 1, 1, NULL, NULL, NULL, NULL, 'sn', 'UserModule.models_Profile', 1, 1),
+(1, 1, NULL, 'humhub\\modules\\user\\models\\fieldtype\\Text', '{"minLength":"","maxLength":"20","validator":"","default":"","regexp":"","regexpErrorMessage":"","fieldTypes":[]}', 'firstname', 'Nombre', '', 100, 0, 1, 1, 1, NULL, NULL, NULL, NULL, 'givenName', 'UserModule.models_Profile', 1, 1),
+(2, 1, NULL, 'humhub\\modules\\user\\models\\fieldtype\\Text', '{"minLength":"","maxLength":"30","validator":"","default":"","regexp":"","regexpErrorMessage":"","fieldTypes":[]}', 'lastname', 'Apellido', '', 200, 0, 1, 1, 1, NULL, NULL, NULL, NULL, 'sn', 'UserModule.models_Profile', 1, 1),
 (3, 1, NULL, 'humhub\\modules\\user\\models\\fieldtype\\Text', '{"minLength":null,"maxLength":50,"validator":null,"default":null,"regexp":null,"regexpErrorMessage":null,"fieldTypes":[]}', 'title', 'Title', NULL, 300, NULL, NULL, 1, 1, NULL, NULL, NULL, NULL, 'title', NULL, 1, 1),
 (4, 1, NULL, 'humhub\\modules\\user\\models\\fieldtype\\Select', '{"options":"male=>Male\\nfemale=>Female\\ncustom=>Custom","fieldTypes":[]}', 'gender', 'Gender', NULL, 300, NULL, NULL, 1, 1, NULL, NULL, NULL, NULL, NULL, NULL, 1, 1),
-(5, 1, NULL, 'humhub\\modules\\user\\models\\fieldtype\\Text', '{"minLength":"","maxLength":"150","validator":"","default":"","regexp":"","regexpErrorMessage":"","fieldTypes":[]}', 'street', 'Street', '', 400, 0, 1, 1, 1, NULL, NULL, NULL, NULL, '', 'UserModule.models_Profile', 1, 1),
+(5, 1, NULL, 'humhub\\modules\\user\\models\\fieldtype\\Text', '{"minLength":"","maxLength":"150","validator":"","default":"","regexp":"","regexpErrorMessage":"","fieldTypes":[]}', 'street', 'Direccion', '', 400, 0, 1, 1, 1, NULL, NULL, NULL, NULL, '', 'UserModule.models_Profile', 1, 1),
 (6, 1, NULL, 'humhub\\modules\\user\\models\\fieldtype\\Text', '{"minLength":null,"maxLength":10,"validator":null,"default":null,"regexp":null,"regexpErrorMessage":null,"fieldTypes":[]}', 'zip', 'Zip', NULL, 500, NULL, NULL, 1, 1, NULL, NULL, NULL, NULL, NULL, NULL, 1, 1),
-(7, 1, NULL, 'humhub\\modules\\user\\models\\fieldtype\\Text', '{"minLength":"","maxLength":"100","validator":"","default":"","regexp":"","regexpErrorMessage":"","fieldTypes":[]}', 'city', 'City', '', 600, 0, 1, 1, 1, NULL, NULL, NULL, NULL, '', 'UserModule.models_Profile', 1, 1),
+(7, 1, NULL, 'humhub\\modules\\user\\models\\fieldtype\\Text', '{"minLength":"","maxLength":"100","validator":"","default":"","regexp":"","regexpErrorMessage":"","fieldTypes":[]}', 'city', 'Ciudad', '', 600, 0, 1, 1, 1, NULL, NULL, NULL, NULL, '', 'UserModule.models_Profile', 1, 1),
 (8, 1, NULL, 'humhub\\modules\\user\\models\\fieldtype\\CountrySelect', '{"options":null,"fieldTypes":[]}', 'country', 'Country', NULL, 700, NULL, NULL, 1, 1, NULL, NULL, NULL, NULL, NULL, NULL, 1, 1),
 (9, 1, NULL, 'humhub\\modules\\user\\models\\fieldtype\\Text', '{"minLength":null,"maxLength":100,"validator":null,"default":null,"regexp":null,"regexpErrorMessage":null,"fieldTypes":[]}', 'state', 'State', NULL, 800, NULL, NULL, 1, 1, NULL, NULL, NULL, NULL, NULL, NULL, 1, 1),
 (10, 1, NULL, 'humhub\\modules\\user\\models\\fieldtype\\Birthday', '{"defaultHideAge":false,"fieldTypes":[]}', 'birthday', 'Birthday', NULL, 900, NULL, NULL, 1, 1, NULL, NULL, NULL, NULL, NULL, NULL, 1, 1),
 (11, 1, NULL, 'humhub\\modules\\user\\models\\fieldtype\\TextArea', '{"fieldTypes":[]}', 'about', 'About', NULL, 900, NULL, NULL, 1, 1, NULL, NULL, NULL, NULL, NULL, NULL, 1, 1),
 (12, 2, NULL, 'humhub\\modules\\user\\models\\fieldtype\\Text', '{"minLength":null,"maxLength":100,"validator":null,"default":null,"regexp":null,"regexpErrorMessage":null,"fieldTypes":[]}', 'phone_private', 'Phone Private', NULL, 100, NULL, NULL, 1, 1, NULL, NULL, NULL, NULL, NULL, NULL, 1, 1),
 (13, 2, NULL, 'humhub\\modules\\user\\models\\fieldtype\\Text', '{"minLength":null,"maxLength":100,"validator":null,"default":null,"regexp":null,"regexpErrorMessage":null,"fieldTypes":[]}', 'phone_work', 'Phone Work', NULL, 200, NULL, NULL, 1, 1, NULL, NULL, NULL, NULL, NULL, NULL, 1, 1),
-(14, 2, NULL, 'humhub\\modules\\user\\models\\fieldtype\\Text', '{"minLength":"","maxLength":"100","validator":"","default":"","regexp":"","regexpErrorMessage":"","fieldTypes":[]}', 'mobile', 'Mobile', '', 300, 0, 1, 1, 1, NULL, NULL, NULL, NULL, '', 'UserModule.models_Profile', 1, 1),
+(14, 2, NULL, 'humhub\\modules\\user\\models\\fieldtype\\Text', '{"minLength":"","maxLength":"100","validator":"","default":"","regexp":"","regexpErrorMessage":"","fieldTypes":[]}', 'mobile', 'Telefono', '', 300, 0, 1, 1, 1, NULL, NULL, NULL, NULL, '', 'UserModule.models_Profile', 1, 1),
 (15, 2, NULL, 'humhub\\modules\\user\\models\\fieldtype\\Text', '{"minLength":null,"maxLength":100,"validator":null,"default":null,"regexp":null,"regexpErrorMessage":null,"fieldTypes":[]}', 'fax', 'Fax', NULL, 400, NULL, NULL, 1, 1, NULL, NULL, NULL, NULL, NULL, NULL, 1, 1),
 (16, 2, NULL, 'humhub\\modules\\user\\models\\fieldtype\\Text', '{"minLength":null,"maxLength":100,"validator":null,"default":null,"regexp":null,"regexpErrorMessage":null,"fieldTypes":[]}', 'im_skype', 'Skype Nickname', NULL, 500, NULL, NULL, 1, 1, NULL, NULL, NULL, NULL, NULL, NULL, 1, 1),
 (17, 2, NULL, 'humhub\\modules\\user\\models\\fieldtype\\Text', '{"minLength":null,"maxLength":100,"validator":null,"default":null,"regexp":null,"regexpErrorMessage":null,"fieldTypes":[]}', 'im_msn', 'MSN', NULL, 600, NULL, NULL, 1, 1, NULL, NULL, NULL, NULL, NULL, NULL, 1, 1),
@@ -801,7 +828,11 @@ CREATE TABLE `space` (
 --
 
 INSERT INTO `space` (`id`, `guid`, `wall_id`, `name`, `description`, `join_policy`, `visibility`, `status`, `tags`, `created_at`, `created_by`, `updated_at`, `updated_by`, `ldap_dn`, `auto_add_new_members`, `contentcontainer_id`, `default_content_visibility`, `color`, `members_can_leave`, `url`) VALUES
-(1, '8acd82e6-f687-46aa-a9bd-ae0006f5e47a', 2, 'Welcome Space', 'Your first sample space to discover the platform.', 2, 2, 1, NULL, '2016-08-17 00:16:25', 1, '2016-08-17 00:16:25', 1, NULL, 1, 2, NULL, '#6fdbe8', 1, 'welcome-space');
+(1, '8acd82e6-f687-46aa-a9bd-ae0006f5e47a', 2, 'Discapacidad visual', '', 2, 2, 1, NULL, '2016-08-17 00:16:25', 1, '2016-08-17 00:16:25', 1, NULL, 1, 2, NULL, '#6fdbe8', 1, 'welcome-space'),
+(2, '1337dd66-4e48-4853-bf27-031868aaae8f', 9, 'Autismo', 'desc', 1, 1, 1, NULL, '2016-08-17 04:59:49', 1, '2016-08-17 04:59:49', 1, NULL, NULL, 9, NULL, '#d1d1d1', 1, 'autismo'),
+(3, 'efc613df-7a03-4c7f-a63c-f8e02485f3ed', 10, 'Sindrome de Down', 'descr Sindrome de Down', 1, 1, 1, NULL, '2016-08-17 05:41:57', 1, '2016-08-17 05:41:57', 1, NULL, NULL, 10, NULL, '#d1d1d1', 1, 'sindrome-de-down'),
+(4, 'b6eed4b4-5e87-42e5-86ab-aa92287cf0d8', 11, 'Autismo2', '', 1, 1, 1, NULL, '2016-08-17 05:46:11', 1, '2016-08-17 05:46:11', 1, NULL, NULL, 11, NULL, '#d1d1d1', 1, 'autismo2'),
+(5, '20da4c5e-0ce9-471d-9882-44c04cdd59a4', 12, 'Autismo General', '', 2, 2, 1, NULL, '2016-08-17 05:59:09', 2, '2016-08-17 05:59:09', 2, NULL, NULL, 12, NULL, '#d1d1d1', 1, 'autismo-general');
 
 -- --------------------------------------------------------
 
@@ -830,13 +861,18 @@ CREATE TABLE `space_membership` (
 --
 
 INSERT INTO `space_membership` (`space_id`, `user_id`, `originator_user_id`, `status`, `request_message`, `last_visit`, `created_at`, `created_by`, `updated_at`, `updated_by`, `group_id`, `show_at_dashboard`, `can_cancel_membership`) VALUES
-(1, 1, NULL, 3, NULL, NULL, NULL, NULL, NULL, NULL, 'admin', 1, 1),
+(1, 1, NULL, 3, NULL, '2016-08-17 05:56:30', NULL, NULL, NULL, NULL, 'admin', 1, 1),
 (1, 2, NULL, 3, NULL, NULL, NULL, NULL, NULL, NULL, 'member', 1, 1),
-(1, 3, NULL, 3, NULL, NULL, NULL, NULL, NULL, NULL, 'member', 1, 1),
 (1, 4, NULL, 3, NULL, NULL, NULL, NULL, NULL, NULL, 'member', 1, 1),
 (1, 5, NULL, 3, NULL, NULL, NULL, NULL, NULL, NULL, 'member', 1, 1),
 (1, 6, NULL, 3, NULL, NULL, NULL, NULL, NULL, NULL, 'member', 1, 1),
-(1, 7, NULL, 3, NULL, NULL, NULL, NULL, NULL, NULL, 'member', 1, 1);
+(1, 7, NULL, 3, NULL, NULL, NULL, NULL, NULL, NULL, 'member', 1, 1),
+(2, 1, NULL, 3, NULL, '2016-08-17 06:25:23', NULL, NULL, NULL, NULL, 'admin', 1, 1),
+(2, 2, '1', 3, NULL, '2016-08-17 06:25:39', NULL, NULL, NULL, NULL, 'member', 1, 1),
+(3, 1, NULL, 3, NULL, '2016-08-17 06:00:12', NULL, NULL, NULL, NULL, 'admin', 0, 1),
+(4, 1, NULL, 3, NULL, '2016-08-17 05:51:31', NULL, NULL, NULL, NULL, 'admin', 1, 1),
+(5, 1, '2', 3, NULL, '2016-08-17 06:00:22', NULL, NULL, NULL, NULL, 'member', 1, 1),
+(5, 2, NULL, 3, NULL, '2016-08-17 06:00:04', NULL, NULL, NULL, NULL, 'admin', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -894,9 +930,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `guid`, `wall_id`, `status`, `username`, `email`, `auth_mode`, `tags`, `language`, `last_activity_email`, `created_at`, `created_by`, `updated_at`, `updated_by`, `last_login`, `visibility`, `time_zone`, `contentcontainer_id`) VALUES
-(1, 'e445536f-f62b-45f7-8dd2-0c1f4cddc745', 1, 1, 'admin', 'admin@gmail.com', 'local', 'Administration, Support, HumHub', '', '2016-08-17 00:16:23', '2016-08-17 00:16:23', NULL, '2016-08-17 00:23:23', 1, '2016-08-17 03:00:22', 1, 'Europe/Berlin', 1),
-(2, '68273021-ab01-4389-8c01-fa605f7f845f', 3, 1, 'test', 'test@gmail.com', 'local', NULL, 'es', '2016-08-17 01:07:48', '2016-08-17 01:07:48', 1, '2016-08-17 01:07:48', 1, NULL, 1, 'Europe/Berlin', 3),
-(3, '6b08b5a4-4793-4a21-af77-f91a02937464', 4, 2, 'test2', NULL, 'local', NULL, 'es', '2016-08-17 02:27:09', '2016-08-17 02:27:09', NULL, '2016-08-17 02:27:09', NULL, NULL, 1, 'Europe/Berlin', 4),
+(1, 'e445536f-f62b-45f7-8dd2-0c1f4cddc745', 1, 1, 'admin', 'admin@gmail.com', 'local', 'Administration, Support, HumHub', '', '2016-08-17 00:16:23', '2016-08-17 00:16:23', NULL, '2016-08-17 00:23:23', 1, '2016-08-17 06:35:13', 1, 'Europe/Berlin', 1),
+(2, '68273021-ab01-4389-8c01-fa605f7f845f', 3, 1, 'test', 'test@gmail.com', 'local', NULL, 'es', '2016-08-17 01:07:48', '2016-08-17 01:07:48', 1, '2016-08-17 01:07:48', 1, '2016-08-17 05:57:27', 1, 'Europe/Berlin', 3),
 (4, 'bed1aec2-e06a-43df-aa24-4e6ef2d3c830', 5, 1, 'test3', NULL, 'local', NULL, 'es', '2016-08-17 02:32:38', '2016-08-17 02:32:38', NULL, '2016-08-17 02:32:38', NULL, '2016-08-17 02:32:57', 1, 'Europe/Berlin', 5),
 (5, 'dc230e05-6f91-4e4e-ad1c-c3fc440f7f0b', 6, 1, 'centro', NULL, 'local', NULL, 'es', '2016-08-17 03:08:30', '2016-08-17 03:08:30', NULL, '2016-08-17 03:08:30', NULL, '2016-08-17 03:08:50', 1, 'Europe/Berlin', 6),
 (6, '4d5e40b8-1ce5-4b9f-bbd4-29c039b9cde2', 7, 1, 'centro2', NULL, 'local', NULL, 'es', '2016-08-17 03:52:09', '2016-08-17 03:52:09', NULL, '2016-08-17 03:52:09', NULL, NULL, 1, 'Europe/Berlin', 7),
@@ -934,7 +969,8 @@ CREATE TABLE `user_follow` (
 --
 
 INSERT INTO `user_follow` (`id`, `object_model`, `object_id`, `user_id`, `send_notifications`) VALUES
-(1, 'humhub\\modules\\post\\models\\Post', 1, 1, 1);
+(2, 'humhub\\modules\\post\\models\\Post', 2, 1, 1),
+(3, 'humhub\\modules\\post\\models\\Post', 3, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -967,12 +1003,8 @@ CREATE TABLE `user_http_session` (
 --
 
 INSERT INTO `user_http_session` (`id`, `expire`, `user_id`, `data`) VALUES
-('4f2cll6sgr154up4qn423245t7', 1471410866, 1, 0x5f5f666c6173687c613a303a7b7d5f5f69647c693a313b63757272656e7441757468436c69656e7449647c733a353a226c6f63616c223b),
-('d2jqo41r67cp5c69ofhhud6t04', 1471421247, NULL, 0x5f5f666c6173687c613a303a7b7d),
-('ipa71poep3s0efuj2ebt4aopr3', 1471416385, 1, 0x5f5f666c6173687c613a303a7b7d5f5f69647c693a313b63757272656e7441757468436c69656e7449647c733a353a226c6f63616c223b),
-('s3o1lp1b30kiqufc90q5pb5t11', 1471416445, NULL, 0x5f5f666c6173687c613a303a7b7d),
-('taogpkvrtcg22at8tq6upjsn13', 1471419391, NULL, 0x5f5f666c6173687c613a303a7b7d),
-('vo4vqvkri27j9qcvu98qdomjq4', 1471422187, 7, 0x5f5f666c6173687c613a303a7b7d5f5f69647c693a373b);
+('9r9o82uas116slu7hldt1hfgr7', 1471433135, 1, 0x5f5f666c6173687c613a303a7b7d5f5f69647c693a313b63757272656e7441757468436c69656e7449647c733a353a226c6f63616c223b),
+('bs0g1urjn5qsmikbi1qo2dh4k6', 1471433129, 1, 0x5f5f666c6173687c613a303a7b7d5f5f636170746368612f757365722f617574682f636170746368617c733a373a2272616d647a6461223b5f5f636170746368612f757365722f617574682f63617074636861636f756e747c693a313b5f5f69647c693a313b63757272656e7441757468436c69656e7449647c733a353a226c6f63616c223b);
 
 -- --------------------------------------------------------
 
@@ -1052,7 +1084,6 @@ CREATE TABLE `user_password` (
 INSERT INTO `user_password` (`id`, `user_id`, `algorithm`, `password`, `salt`, `created_at`) VALUES
 (1, 1, 'sha512whirlpool', '9f25bb26827d93772236a3fc89cf4113ccc8865520436a59257e78a292cc3ebeb7bded39526f996b248039b0deaff0c47aaaac8496f2cf4c86d8b1454e949693', '5fee75f4-5c2a-4270-9cb0-919bed2257e7', '2016-08-17 00:16:24'),
 (2, 2, 'sha512whirlpool', '6f992d75a7d5aba514d88e3e16f2beff3ef15bbdb8148b35b9abc2064e9eb69e2c591865f52aded70be695bc3ed822c24b2d5efb9b99a5422f55545106a31cef', '32838621-3a02-4e55-a78b-b2dcb615551f', '2016-08-17 01:07:50'),
-(3, 3, 'sha512whirlpool', 'bba147ed412903db7f098d0352cc9e2a7a12e3be9ddf90234ab1be62a84922a5b3c1e263af13d7b1ef256fcccbb88d1e4d860e10968a673cebe0590edcfe2412', 'e641eb04-50f5-41ce-bd2a-dc5c7f2bb1aa', '2016-08-17 02:27:10'),
 (4, 4, 'sha512whirlpool', '53511162177fe22c2d6e16bd13bcc76cfbd28b8b94ba7a0b5d02a95af84e1a80ad2200bcf717c1bd91ddbc24513abfe28fc569139da267dcdfb3354bd3259bc6', '2ba6c999-61ad-4bea-af3c-9a1b34f8d944', '2016-08-17 02:32:40'),
 (5, 5, 'sha512whirlpool', '97ebeb51103dcd2e553a424e086429eaa06d06975c521706545b56a1c454c7a770128d5512b33ece552dbc2cb8f43273ce45e8a64e26e9dba33d6444007fdd9d', 'b2b26551-531c-4f2d-8cdc-7b5dd99655d2', '2016-08-17 03:08:32'),
 (6, 6, 'sha512whirlpool', '297adb0de2fafb4ba51fdeee3b3a3ff937495815ee8058745b898371b893895d6439c51bf69e84d7b0ed04480a376025ba42ca09a6c25869788a6383e3ad999f', '0ea323db-2c9c-4b38-ae99-f9d5d5b9e08f', '2016-08-17 03:52:11'),
@@ -1082,11 +1113,14 @@ INSERT INTO `wall` (`id`, `object_model`, `object_id`, `created_at`, `created_by
 (1, 'humhub\\modules\\user\\models\\User', 1, NULL, NULL, NULL, NULL),
 (2, 'humhub\\modules\\space\\models\\Space', 1, NULL, NULL, NULL, NULL),
 (3, 'humhub\\modules\\user\\models\\User', 2, NULL, NULL, NULL, NULL),
-(4, 'humhub\\modules\\user\\models\\User', 3, NULL, NULL, NULL, NULL),
 (5, 'humhub\\modules\\user\\models\\User', 4, NULL, NULL, NULL, NULL),
 (6, 'humhub\\modules\\user\\models\\User', 5, NULL, NULL, NULL, NULL),
 (7, 'humhub\\modules\\user\\models\\User', 6, NULL, NULL, NULL, NULL),
-(8, 'humhub\\modules\\user\\models\\User', 7, NULL, NULL, NULL, NULL);
+(8, 'humhub\\modules\\user\\models\\User', 7, NULL, NULL, NULL, NULL),
+(9, 'humhub\\modules\\space\\models\\Space', 2, NULL, NULL, NULL, NULL),
+(10, 'humhub\\modules\\space\\models\\Space', 3, NULL, NULL, NULL, NULL),
+(11, 'humhub\\modules\\space\\models\\Space', 4, NULL, NULL, NULL, NULL),
+(12, 'humhub\\modules\\space\\models\\Space', 5, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1110,14 +1144,21 @@ CREATE TABLE `wall_entry` (
 
 INSERT INTO `wall_entry` (`id`, `wall_id`, `content_id`, `created_at`, `created_by`, `updated_at`, `updated_by`) VALUES
 (1, 2, 1, '2016-08-17 00:16:26', 1, '2016-08-17 00:16:26', 1),
-(2, 2, 3, '2016-08-17 00:16:26', 1, '2016-08-17 00:16:26', 1),
-(3, 2, 2, '2016-08-17 00:16:26', 1, '2016-08-17 00:16:26', 1),
 (4, 2, 4, '2016-08-17 01:07:49', 1, '2016-08-17 01:07:49', 1),
-(5, 2, 5, '2016-08-17 02:29:56', 1, '2016-08-17 02:29:56', 1),
 (6, 2, 6, '2016-08-17 02:32:39', NULL, '2016-08-17 02:32:39', NULL),
 (7, 2, 7, '2016-08-17 03:08:31', NULL, '2016-08-17 03:08:31', NULL),
 (8, 2, 8, '2016-08-17 03:52:10', NULL, '2016-08-17 03:52:10', NULL),
-(9, 2, 9, '2016-08-17 03:52:44', NULL, '2016-08-17 03:52:44', NULL);
+(9, 2, 9, '2016-08-17 03:52:44', NULL, '2016-08-17 03:52:44', NULL),
+(10, 9, 10, '2016-08-17 04:59:50', 1, '2016-08-17 04:59:50', 1),
+(11, 9, 12, '2016-08-17 05:00:24', 1, '2016-08-17 05:00:24', 1),
+(12, 9, 11, '2016-08-17 05:00:25', 1, '2016-08-17 05:00:25', 1),
+(13, 10, 13, '2016-08-17 05:41:58', 1, '2016-08-17 05:41:58', 1),
+(14, 10, 15, '2016-08-17 05:43:40', 1, '2016-08-17 05:43:40', 1),
+(15, 10, 14, '2016-08-17 05:43:40', 1, '2016-08-17 05:43:40', 1),
+(16, 11, 16, '2016-08-17 05:46:12', 1, '2016-08-17 05:46:12', 1),
+(17, 12, 17, '2016-08-17 05:59:10', 2, '2016-08-17 05:59:10', 2),
+(18, 12, 18, '2016-08-17 06:00:21', 1, '2016-08-17 06:00:21', 1),
+(19, 9, 19, '2016-08-17 06:25:37', 2, '2016-08-17 06:25:37', 2);
 
 --
 -- Índices para tablas volcadas
@@ -1380,7 +1421,7 @@ ALTER TABLE `wall_entry`
 -- AUTO_INCREMENT de la tabla `activity`
 --
 ALTER TABLE `activity`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 --
 -- AUTO_INCREMENT de la tabla `comment`
 --
@@ -1390,12 +1431,12 @@ ALTER TABLE `comment`
 -- AUTO_INCREMENT de la tabla `content`
 --
 ALTER TABLE `content`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 --
 -- AUTO_INCREMENT de la tabla `contentcontainer`
 --
 ALTER TABLE `contentcontainer`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT de la tabla `contentcontainer_setting`
 --
@@ -1425,17 +1466,17 @@ ALTER TABLE `like`
 -- AUTO_INCREMENT de la tabla `log`
 --
 ALTER TABLE `log`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=75;
 --
 -- AUTO_INCREMENT de la tabla `notification`
 --
 ALTER TABLE `notification`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT de la tabla `post`
 --
 ALTER TABLE `post`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT de la tabla `profile_field`
 --
@@ -1455,7 +1496,7 @@ ALTER TABLE `setting`
 -- AUTO_INCREMENT de la tabla `space`
 --
 ALTER TABLE `space`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT de la tabla `space_module`
 --
@@ -1475,7 +1516,7 @@ ALTER TABLE `user_auth`
 -- AUTO_INCREMENT de la tabla `user_follow`
 --
 ALTER TABLE `user_follow`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT de la tabla `user_friendship`
 --
@@ -1505,12 +1546,12 @@ ALTER TABLE `user_password`
 -- AUTO_INCREMENT de la tabla `wall`
 --
 ALTER TABLE `wall`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT de la tabla `wall_entry`
 --
 ALTER TABLE `wall_entry`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 --
 -- Restricciones para tablas volcadas
 --
