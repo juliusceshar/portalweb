@@ -14,7 +14,7 @@ Thumbs.db
 
 # composer vendor dir
 /vendor
-/protected/vendor/
+
 /assets
 
 # composer itself is not needed
