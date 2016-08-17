@@ -24,7 +24,17 @@ use humhub\modules\user\models\GroupUser;
  */
 class Registration extends HForm
 {
+    private $_typeForm;
 
+    public function getTypeForm()
+    {
+        return $this->_typeForm;
+    }
+
+    public function setTypeForm($value)
+    {
+        $this->_typeForm = trim($value);
+    }
     /**
      * @var boolean show password creation form
      */
@@ -39,6 +49,11 @@ class Registration extends HForm
      * @var boolean|null require user approval by admin after registration.
      */
     public $enableUserApproval = false;
+
+    /**
+     * @var typeform| form tutor.
+     */
+    public  $typeForm = '';
 
     /**
      * @var User
@@ -95,7 +110,12 @@ class Registration extends HForm
         if ($this->enablePasswordForm) {
             $this->definition['elements']['Password'] = $this->getPasswordFormDefinition();
         }
-        $this->definition['elements']['Profile'] = array_merge(array('type' => 'form'), $this->getProfile()->getFormDefinition());
+        if($this->_typeForm == 'centro')
+            $this->definition['elements']['Profile'] = array_merge(array('type' => 'form'), $this->getProfile()->getFormDefinitionCentro());
+        else if($this->_typeForm == 'tutor')
+            $this->definition['elements']['Profile'] = array_merge(array('type' => 'form'), $this->getProfile()->getFormDefinitionTutor());
+        else
+            $this->definition['elements']['Profile'] = array_merge(array('type' => 'form'), $this->getProfile()->getFormDefinition());
         $this->definition['buttons'] = array(
             'save' => array(
                 'type' => 'submit',
@@ -123,12 +143,12 @@ class Registration extends HForm
             'class' => 'form-control',
             'maxlength' => 25,
         ];
-        if ($this->enableEmailField) {
+//        if ($this->enableEmailField) {
             $form['elements']['email'] = [
                 'type' => 'text',
                 'class' => 'form-control',
             ];
-        }
+//        }
 
         return $form;
     }

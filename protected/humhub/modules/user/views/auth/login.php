@@ -63,7 +63,6 @@ $this->pageTitle = Yii::t('UserModule.views_auth_login', 'Login');
              style="max-width: 300px; margin: 0 auto 20px; text-align: left;">
 
             <div class="panel-heading"><?php echo Yii::t('UserModule.views_auth_login', '<strong>Sign</strong> up') ?></div>
-
             <div class="panel-body">
 
                 <p><?php echo Yii::t('UserModule.views_auth_login', "Don't have an account? Join the network by entering your e-mail address."); ?></p>

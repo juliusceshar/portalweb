@@ -216,6 +216,219 @@ class Profile extends \yii\db\ActiveRecord
         return $definition;
     }
 
+    public function getFormDefinitionCentro()
+    {
+        $definition = array();
+        $definition['elements'] = array();
+
+        $syncAttributes = [];
+        if ($this->user !== null) {
+            $syncAttributes = \humhub\modules\user\authclient\AuthClientHelpers::getSyncAttributesByUser($this->user);
+        }
+
+        $safeAttributes = $this->safeAttributes();
+
+        $categorieCentro = ProfileFieldCategory::find()->where(['title' => 'Centro-Especializado'])->one();
+        $categorieGeneral = ProfileFieldCategory::find()->where(['title' => 'General'])->one();
+        $categorieComunication = ProfileFieldCategory::find()->where(['title' => 'Communication'])->one();
+
+        /*$category = array(
+            'type' => 'form',
+            'title' => '',//Yii::t($categorieCentro->getTranslationCategory(), $categorieCentro->title),
+            'elements' => array(),
+        );*/
+
+        $fieldsForm = array('street', "city", "mobile");
+
+
+        $category = array(
+            'type' => 'form',
+            'title' => '',//Yii::t($categorieCentro->getTranslationCategory(), $categorieCentro->title),
+            'elements' => array(),
+        );
+
+        foreach (ProfileField::find()->orderBy('sort_order')->where(['profile_field_category_id' => $categorieCentro->id])->all() as $profileField) {
+
+            if (!in_array($profileField->internal_name, $safeAttributes)) {
+                if ($profileField->visible && $this->scenario != 'registration') {
+                    $profileField->editable = false;
+                } else {
+                    continue;
+                }
+            }
+
+            // Dont allow editing of ldap syned fields - will be overwritten on next ldap sync.
+            if (in_array($profileField->internal_name, $syncAttributes)) {
+                $profileField->editable = false;
+            }
+
+            $fieldDefinition = $profileField->fieldType->getFieldFormDefinition();
+            $category['elements'] = array_merge($category['elements'], $fieldDefinition);
+
+            $profileField->fieldType->loadDefaults($this);
+        }
+
+        $definition['elements']['category_' . $categorieCentro->id] = $category;
+
+
+        $category2 = array(
+            'type' => 'form',
+            'title' => '',//Yii::t($categorieGeneral->getTranslationCategory(), $categorieGeneral->title),
+            'elements' => array(),
+        );
+
+        foreach (ProfileField::find()->orderBy('sort_order')->where(['profile_field_category_id' => $categorieGeneral->id])->all() as $profileField) {
+
+            if(!in_array($profileField->internal_name, $fieldsForm))
+                continue;
+            if (!in_array($profileField->internal_name, $safeAttributes)) {
+                if ($profileField->visible && $this->scenario != 'registration') {
+                    $profileField->editable = false;
+                } else {
+                    continue;
+                }
+            }
+
+            // Dont allow editing of ldap syned fields - will be overwritten on next ldap sync.
+            if (in_array($profileField->internal_name, $syncAttributes)) {
+                $profileField->editable = false;
+            }
+
+            $fieldDefinition = $profileField->fieldType->getFieldFormDefinition();
+            $category2['elements'] = array_merge($category2['elements'], $fieldDefinition);
+
+            $profileField->fieldType->loadDefaults($this);
+        }
+
+        $definition['elements']['category_' . $categorieGeneral->id] = $category2;
+
+
+        $category3 = array(
+            'type' => 'form',
+            'title' => '',//Yii::t($categorieComunication->getTranslationCategory(), $categorieComunication->title),
+            'elements' => array(),
+        );
+
+        foreach (ProfileField::find()->orderBy('sort_order')->where(['profile_field_category_id' => $categorieComunication->id])->all() as $profileField) {
+
+            if(!in_array($profileField->internal_name, $fieldsForm))
+                continue;
+
+            if (!in_array($profileField->internal_name, $safeAttributes)) {
+                if ($profileField->visible && $this->scenario != 'registration') {
+                    $profileField->editable = false;
+                } else {
+                    continue;
+                }
+            }
+
+            // Dont allow editing of ldap syned fields - will be overwritten on next ldap sync.
+            if (in_array($profileField->internal_name, $syncAttributes)) {
+                $profileField->editable = false;
+            }
+
+            $fieldDefinition = $profileField->fieldType->getFieldFormDefinition();
+            $category3['elements'] = array_merge($category3['elements'], $fieldDefinition);
+
+            $profileField->fieldType->loadDefaults($this);
+        }
+
+        $definition['elements']['category_' . $categorieComunication->id] = $category3;
+
+
+
+        return $definition;
+    }
+
+    public function getFormDefinitionTutor()
+    {
+        $definition = array();
+        $definition['elements'] = array();
+
+        $syncAttributes = [];
+        if ($this->user !== null) {
+            $syncAttributes = \humhub\modules\user\authclient\AuthClientHelpers::getSyncAttributesByUser($this->user);
+        }
+
+        $safeAttributes = $this->safeAttributes();
+
+
+        $categorieGeneral = ProfileFieldCategory::find()->where(['title' => 'General'])->one();
+        $categorieComunication = ProfileFieldCategory::find()->where(['title' => 'Communication'])->one();
+
+
+        $fieldsForm = array("firstname", "lastname", "mobile", "street", "city");
+
+
+        $category2 = array(
+            'type' => 'form',
+            'title' => '',//Yii::t($categorieGeneral->getTranslationCategory(), $categorieGeneral->title),
+            'elements' => array(),
+        );
+
+        foreach (ProfileField::find()->orderBy('sort_order')->where(['profile_field_category_id' => $categorieGeneral->id])->all() as $profileField) {
+
+            if(!in_array($profileField->internal_name, $fieldsForm))
+                continue;
+            if (!in_array($profileField->internal_name, $safeAttributes)) {
+                if ($profileField->visible && $this->scenario != 'registration') {
+                    $profileField->editable = false;
+                } else {
+                    continue;
+                }
+            }
+
+            // Dont allow editing of ldap syned fields - will be overwritten on next ldap sync.
+            if (in_array($profileField->internal_name, $syncAttributes)) {
+                $profileField->editable = false;
+            }
+
+            $fieldDefinition = $profileField->fieldType->getFieldFormDefinition();
+            $category2['elements'] = array_merge($category2['elements'], $fieldDefinition);
+
+            $profileField->fieldType->loadDefaults($this);
+        }
+
+        $definition['elements']['category_' . $categorieGeneral->id] = $category2;
+
+
+        $category3 = array(
+            'type' => 'form',
+            'title' => '',//Yii::t($categorieComunication->getTranslationCategory(), $categorieComunication->title),
+            'elements' => array(),
+        );
+
+        foreach (ProfileField::find()->orderBy('sort_order')->where(['profile_field_category_id' => $categorieComunication->id])->all() as $profileField) {
+
+            if(!in_array($profileField->internal_name, $fieldsForm))
+                continue;
+
+            if (!in_array($profileField->internal_name, $safeAttributes)) {
+                if ($profileField->visible && $this->scenario != 'registration') {
+                    $profileField->editable = false;
+                } else {
+                    continue;
+                }
+            }
+
+            // Dont allow editing of ldap syned fields - will be overwritten on next ldap sync.
+            if (in_array($profileField->internal_name, $syncAttributes)) {
+                $profileField->editable = false;
+            }
+
+            $fieldDefinition = $profileField->fieldType->getFieldFormDefinition();
+            $category3['elements'] = array_merge($category3['elements'], $fieldDefinition);
+
+            $profileField->fieldType->loadDefaults($this);
+        }
+
+        $definition['elements']['category_' . $categorieComunication->id] = $category3;
+
+
+
+        return $definition;
+    }
+
     /**
      * @inheritdoc
      */

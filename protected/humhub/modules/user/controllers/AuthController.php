@@ -91,7 +91,7 @@ class AuthController extends Controller
         if (Yii::$app->request->getIsAjax()) {
             return $this->renderAjax('login_modal', array('model' => $login, 'invite' => $invite, 'canRegister' => $invite->allowSelfInvite()));
         }
-        return $this->render('login', array('model' => $login, 'invite' => $invite, 'canRegister' => $invite->allowSelfInvite()));
+        return $this->render('login', array('model' => $login, 'invite' => $invite, 'canRegister' => true));
     }
 
     /**

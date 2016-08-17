@@ -16,8 +16,8 @@
     array (
       'transport' => 
       array (
-        'class' => 'Swift_MailTransport',
       ),
+      'useFileTransport' => true,
       'view' => 
       array (
         'theme' => 
@@ -42,6 +42,15 @@
         'publishResources' => false,
       ),
     ),
+    'formatter' => 
+    array (
+      'defaultTimeZone' => 'Europe/Berlin',
+    ),
+    'formatterApp' => 
+    array (
+      'defaultTimeZone' => 'Europe/Berlin',
+      'timeZone' => 'Europe/Berlin',
+    ),
   ),
   'params' => 
   array (
@@ -53,10 +62,11 @@
         'installer_database' => 'portalweb_1',
       ),
     ),
-    'config_created_at' => 1471407392,
+    'config_created_at' => 1471413500,
     'databaseInstalled' => true,
     'installed' => true,
   ),
   'name' => 'portalweb',
   'language' => 'es',
+  'timeZone' => 'Europe/Berlin',
 ); ?>

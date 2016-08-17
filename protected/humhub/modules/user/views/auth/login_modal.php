@@ -21,9 +21,17 @@ use humhub\modules\user\widgets\AuthChoice;
                                 href="#login"
                                 data-toggle="tab"><?php echo Yii::t('SpaceModule.views_space_invite', 'Login'); ?></a>
                         </li>
-                        <li class="<?php echo (isset($_POST['Invite'])) ? "active" : ""; ?> tab-register"><a
+                        <!--<li class="<?php /*echo (isset($_POST['Invite'])) ? "active" : ""; */?> tab-register"><a
                                 href="#register"
-                                data-toggle="tab"><?php echo Yii::t('SpaceModule.views_space_invite', 'New user?'); ?></a>
+                                data-toggle="tab"><?php /*echo Yii::t('SpaceModule.views_space_invite', 'New user?'); */?></a>
+                        </li>-->
+                        <li class="<?php echo (isset($_POST['Invite'])) ? "active" : ""; ?> tab-register"><a
+                                href="<?php echo Url::to(['registration/registration1'], true);?>"
+                                >Nuevo Centro</a>
+                        </li>
+                        <li class="<?php echo (isset($_POST['Invite'])) ? "active" : ""; ?> tab-register"><a
+                                href="<?php echo Url::to(['registration/registration2'], true);?>"
+                                >Nuevo Familiar/Tutor</a>
                         </li>
                     </ul>
                 </div>
@@ -118,6 +126,8 @@ use humhub\modules\user\widgets\AuthChoice;
 
                     </div>
                 <?php endif; ?>
+
+
             </div>
         </div>
 

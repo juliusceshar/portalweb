@@ -62,7 +62,7 @@ class RegistrationController extends Controller
          * @var \yii\authclient\BaseClient
          */
         $authClient = null;
-        $inviteToken = Yii::$app->request->get('token', '');
+        $inviteToken = 'qpfUVbxAG8GJ';//Yii::$app->request->get('token', '');
 
         if ($inviteToken != '') {
             $this->handleInviteRegistration($inviteToken, $registration);
@@ -91,6 +91,86 @@ class RegistrationController extends Controller
 
         return $this->render('index', ['hForm' => $registration]);
     }
+
+    public function actionRegistration1()
+    {
+        $registration = new Registration();
+        $registration->setTypeForm('centro');
+
+
+        /**
+         * @var \yii\authclient\BaseClient
+         */
+        $authClient = null;
+        //$inviteToken = 'qpfUVbxAG8GJ';//Yii::$app->request->get('token', '');
+
+        /*if ($inviteToken != '') {
+            $this->handleInviteRegistration($inviteToken, $registration);
+        } else*/if (Yii::$app->session->has('authClient')) {
+            $authClient = Yii::$app->session->get('authClient');
+            $this->handleAuthClientRegistration($authClient, $registration);
+        } /*else {
+            Yii::$app->session->setFlash('error', 'Registration failed.');
+            return $this->redirect(['/user/auth/login']);
+        }*/
+
+        if ($registration->submitted('save') && $registration->validate() && $registration->register($authClient)) {
+            Yii::$app->session->remove('authClient');
+
+            // Autologin when user is enabled (no approval required)
+            if ($registration->getUser()->status === User::STATUS_ENABLED) {
+                Yii::$app->user->switchIdentity($registration->models['User']);
+                return $this->redirect(['/dashboard/dashboard']);
+            }
+
+            return $this->render('success', [
+                'form' => $registration,
+                'needApproval' => ($registration->getUser()->status === User::STATUS_NEED_APPROVAL)
+            ]);
+        }
+
+        return $this->render('index', ['hForm' => $registration]);
+    }
+
+    public function actionRegistration2()
+    {
+        $registration = new Registration();
+        $registration->setTypeForm('tutor');
+        /**
+         * @var \yii\authclient\BaseClient
+         */
+        $authClient = null;
+        //$inviteToken = 'qpfUVbxAG8GJ';//Yii::$app->request->get('token', '');
+
+        /*if ($inviteToken != '') {
+            $this->handleInviteRegistration($inviteToken, $registration);
+        } else*/if (Yii::$app->session->has('authClient')) {
+        $authClient = Yii::$app->session->get('authClient');
+        $this->handleAuthClientRegistration($authClient, $registration);
+    } /*else {
+            Yii::$app->session->setFlash('error', 'Registration failed.');
+            return $this->redirect(['/user/auth/login']);
+        }*/
+
+        if ($registration->submitted('save') && $registration->validate() && $registration->register($authClient)) {
+            Yii::$app->session->remove('authClient');
+
+            // Autologin when user is enabled (no approval required)
+            if ($registration->getUser()->status === User::STATUS_ENABLED) {
+                Yii::$app->user->switchIdentity($registration->models['User']);
+                return $this->redirect(['/dashboard/dashboard']);
+            }
+
+            return $this->render('success', [
+                'form' => $registration,
+                'needApproval' => ($registration->getUser()->status === User::STATUS_NEED_APPROVAL)
+            ]);
+        }
+
+        return $this->render('index', ['hForm' => $registration]);
+    }
+
+
 
     protected function handleInviteRegistration($inviteToken, Registration $form)
     {

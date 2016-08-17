@@ -1068,3 +1068,1984 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1471410536.383
     'REQUEST_TIME' => 1471410536
 ]
+2016-08-17 07:52:09 [::1][1][ipa71poep3s0efuj2ebt4aopr3][error][Swift_TransportException] exception 'Swift_TransportException' with message 'Expected response code 250 but got code "530", with message "530 5.7.0 Must issue a STARTTLS command first. x205sm14699920ywx.4 - gsmtp
+"' in C:\xampp\htdocs\portalweb\protected\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\AbstractSmtpTransport.php:383
+Stack trace:
+#0 C:\xampp\htdocs\portalweb\protected\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\AbstractSmtpTransport.php(281): Swift_Transport_AbstractSmtpTransport->_assertResponseCode('530 5.7.0 Must ...', Array)
+#1 C:\xampp\htdocs\portalweb\protected\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\EsmtpTransport.php(270): Swift_Transport_AbstractSmtpTransport->executeCommand('MAIL FROM:<soci...', Array, Array)
+#2 C:\xampp\htdocs\portalweb\protected\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\EsmtpTransport.php(349): Swift_Transport_EsmtpTransport->executeCommand('MAIL FROM:<soci...', Array)
+#3 C:\xampp\htdocs\portalweb\protected\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\AbstractSmtpTransport.php(416): Swift_Transport_EsmtpTransport->_doMailFromCommand('social@example....')
+#4 C:\xampp\htdocs\portalweb\protected\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\AbstractSmtpTransport.php(444): Swift_Transport_AbstractSmtpTransport->_doMailTransaction(Object(Swift_Message), 'social@example....', Array, Array)
+#5 C:\xampp\htdocs\portalweb\protected\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\AbstractSmtpTransport.php(176): Swift_Transport_AbstractSmtpTransport->_sendTo(Object(Swift_Message), 'social@example....', Array, Array)
+#6 C:\xampp\htdocs\portalweb\protected\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Mailer.php(85): Swift_Transport_AbstractSmtpTransport->send(Object(Swift_Message), Array)
+#7 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2-swiftmailer\Mailer.php(146): Swift_Mailer->send(Object(Swift_Message))
+#8 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\mail\BaseMailer.php(260): yii\swiftmailer\Mailer->sendMessage(Object(yii\swiftmailer\Message))
+#9 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\mail\BaseMessage.php(48): yii\mail\BaseMailer->send(Object(yii\swiftmailer\Message))
+#10 C:\xampp\htdocs\portalweb\protected\humhub\modules\user\models\Invite.php(170): yii\mail\BaseMessage->send()
+#11 C:\xampp\htdocs\portalweb\protected\humhub\modules\user\controllers\InviteController.php(72): humhub\modules\user\models\Invite->sendInviteMail()
+#12 C:\xampp\htdocs\portalweb\protected\humhub\modules\user\controllers\InviteController.php(51): humhub\modules\user\controllers\InviteController->createInvite('juliusceshar@gm...')
+#13 [internal function]: humhub\modules\user\controllers\InviteController->actionIndex()
+#14 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#15 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#16 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('', Array)
+#17 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('user/invite', Array)
+#18 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#19 C:\xampp\htdocs\portalweb\index.php(25): yii\base\Application->run()
+#20 {main}
+2016-08-17 07:52:08 [::1][1][ipa71poep3s0efuj2ebt4aopr3][info][application] $_GET = [
+    'r' => 'user/invite'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '110'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_X_CSRF_TOKEN' => 'dlAxMDVCWFUzGXdneHIPIEQIc31yMm4wGg9FB20OIR0BO2dUZhEBBQ=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_REFERER' => 'http://localhost/portalweb/index.php?r=admin%2Fuser'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8'
+    'HTTP_COOKIE' => 'pm_user-tags-panel=expanded; pm_user-spaces-panel=expanded; pm_getting-started-panel=expanded; pm_new-people-panel=expanded; pm_new-spaces-panel=expanded; PHPSESSID=ipa71poep3s0efuj2ebt4aopr3; _csrf=da8a8137e04a80d8958142b3d21705ebcb40351e0f1205c136cd9a031bc5dc37a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22EIFWM0Wu2XBMGp6el_t7XLyHwkVdSSYP%22%3B%7D; _identity=6940a7afe0bd9d373531e4830fcb21833983f81667c6a460239574d40111136ba%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%22e445536f-f62b-45f7-8dd2-0c1f4cddc745%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\xampp\\htdocs\\yii-1.1.14\\framework;C:\\xampp\\php;~\\.composer\\vendor\\bin\\;C:\\Program Files (x86)\\Microsoft ASP.NET\\ASP.NET Web Pages\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\8.0\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Java\\jdk1.7.0_15\\bin;C:\\Program Files\\Microsoft\\Web Platform Installer\\;C:\\Program Files (x86)\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\ManagementStudio\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Users\\JulyosCesar\\AppData\\Roaming\\npm;C:\\Users\\JulyosCesar\\AppData\\Local\\.meteor\\'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/portalweb/index.php'
+    'REMOTE_PORT' => '58941'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=user%2Finvite'
+    'REQUEST_URI' => '/portalweb/index.php?r=user%2Finvite'
+    'SCRIPT_NAME' => '/portalweb/index.php'
+    'PHP_SELF' => '/portalweb/index.php'
+    'REQUEST_TIME_FLOAT' => 1471413128.36
+    'REQUEST_TIME' => 1471413128
+]
+2016-08-17 07:58:50 [::1][-][11un5kg9lq8i8l0da7sgf13lr7][error][yii\web\HttpException:401] exception 'yii\web\HttpException' with message '¡Necesitas iniciar sesión para ver este perfil de usuario!' in C:\xampp\htdocs\portalweb\protected\humhub\modules\user\behaviors\ProfileController.php:72
+Stack trace:
+#0 [internal function]: humhub\modules\user\behaviors\ProfileController->checkAccess()
+#1 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Component.php(282): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\portalweb\protected\humhub\modules\content\components\ContentContainerController.php(137): yii\base\Component->__call('checkAccess', Array)
+#3 C:\xampp\htdocs\portalweb\protected\humhub\modules\content\components\ContentContainerController.php(137): humhub\modules\user\controllers\ProfileController->checkAccess()
+#4 C:\xampp\htdocs\portalweb\protected\humhub\modules\content\components\ContentContainerController.php(97): humhub\modules\content\components\ContentContainerController->checkContainerAccess()
+#5 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Object.php(107): humhub\modules\content\components\ContentContainerController->init()
+#6 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Controller.php(84): yii\base\Object->__construct(Array)
+#7 [internal function]: yii\base\Controller->__construct('profile', Object(humhub\modules\user\Module), Array)
+#8 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\di\Container.php(373): ReflectionClass->newInstanceArgs(Array)
+#9 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\di\Container.php(154): yii\di\Container->build('humhub\\modules\\...', Array, Array)
+#10 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\BaseYii.php(340): yii\di\Container->get('humhub\\modules\\...', Array)
+#11 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Module.php(567): yii\BaseYii::createObject('humhub\\modules\\...', Array)
+#12 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Module.php(520): yii\base\Module->createControllerByID('profile')
+#13 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Module.php(512): yii\base\Module->createController('profile')
+#14 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Module.php(448): yii\base\Module->createController('user/profile')
+#15 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('user/profile', Array)
+#16 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#17 C:\xampp\htdocs\portalweb\index.php(25): yii\base\Application->run()
+#18 {main}
+2016-08-17 07:58:49 [::1][-][11un5kg9lq8i8l0da7sgf13lr7][info][application] $_GET = [
+    'r' => 'user/profile'
+    'uguid' => '68273021-ab01-4389-8c01-fa605f7f845f'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/portalweb/index.php?r=directory%2Fdirectory%2Fmembers'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8'
+    'HTTP_COOKIE' => 'pm_new-people-panel=expanded; pm_new-spaces-panel=expanded; pm_user-statistics-panel=expanded; _csrf=83bbcbf3a7bb27a4f3e46465cf92ad154109ba02ade2ca5e07c4355cb58bfc9ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22iaAmiYoPfZ1qXxww1IJ0m126OjWrIzOS%22%3B%7D; PHPSESSID=11un5kg9lq8i8l0da7sgf13lr7'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\xampp\\htdocs\\yii-1.1.14\\framework;C:\\xampp\\php;~\\.composer\\vendor\\bin\\;C:\\Program Files (x86)\\Microsoft ASP.NET\\ASP.NET Web Pages\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\8.0\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Java\\jdk1.7.0_15\\bin;C:\\Program Files\\Microsoft\\Web Platform Installer\\;C:\\Program Files (x86)\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\ManagementStudio\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Users\\JulyosCesar\\AppData\\Roaming\\npm;C:\\Users\\JulyosCesar\\AppData\\Local\\.meteor\\'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/portalweb/index.php'
+    'REMOTE_PORT' => '59075'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=user%2Fprofile&uguid=68273021-ab01-4389-8c01-fa605f7f845f'
+    'REQUEST_URI' => '/portalweb/index.php?r=user%2Fprofile&uguid=68273021-ab01-4389-8c01-fa605f7f845f'
+    'SCRIPT_NAME' => '/portalweb/index.php'
+    'PHP_SELF' => '/portalweb/index.php'
+    'REQUEST_TIME_FLOAT' => 1471413529.943
+    'REQUEST_TIME' => 1471413529
+]
+2016-08-17 07:58:50 [::1][-][11un5kg9lq8i8l0da7sgf13lr7][error][yii\web\HttpException:401] exception 'yii\web\HttpException' with message '¡Necesitas iniciar sesión para ver este perfil de usuario!' in C:\xampp\htdocs\portalweb\protected\humhub\modules\user\behaviors\ProfileController.php:72
+Stack trace:
+#0 [internal function]: humhub\modules\user\behaviors\ProfileController->checkAccess()
+#1 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Component.php(282): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\portalweb\protected\humhub\modules\content\components\ContentContainerController.php(137): yii\base\Component->__call('checkAccess', Array)
+#3 C:\xampp\htdocs\portalweb\protected\humhub\modules\content\components\ContentContainerController.php(137): humhub\modules\user\controllers\ProfileController->checkAccess()
+#4 C:\xampp\htdocs\portalweb\protected\humhub\modules\content\components\ContentContainerController.php(97): humhub\modules\content\components\ContentContainerController->checkContainerAccess()
+#5 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Object.php(107): humhub\modules\content\components\ContentContainerController->init()
+#6 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Controller.php(84): yii\base\Object->__construct(Array)
+#7 [internal function]: yii\base\Controller->__construct('profile', Object(humhub\modules\user\Module), Array)
+#8 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\di\Container.php(373): ReflectionClass->newInstanceArgs(Array)
+#9 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\di\Container.php(154): yii\di\Container->build('humhub\\modules\\...', Array, Array)
+#10 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\BaseYii.php(340): yii\di\Container->get('humhub\\modules\\...', Array)
+#11 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Module.php(567): yii\BaseYii::createObject('humhub\\modules\\...', Array)
+#12 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Module.php(520): yii\base\Module->createControllerByID('profile')
+#13 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Module.php(512): yii\base\Module->createController('profile')
+#14 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Module.php(448): yii\base\Module->createController('user/profile')
+#15 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('user/profile', Array)
+#16 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#17 C:\xampp\htdocs\portalweb\index.php(25): yii\base\Application->run()
+#18 {main}
+2016-08-17 07:58:50 [::1][-][11un5kg9lq8i8l0da7sgf13lr7][info][application] $_GET = [
+    'r' => 'user/profile'
+    'uguid' => '68273021-ab01-4389-8c01-fa605f7f845f'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/portalweb/index.php?r=directory%2Fdirectory%2Fmembers'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8'
+    'HTTP_COOKIE' => 'pm_new-people-panel=expanded; pm_new-spaces-panel=expanded; pm_user-statistics-panel=expanded; _csrf=83bbcbf3a7bb27a4f3e46465cf92ad154109ba02ade2ca5e07c4355cb58bfc9ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22iaAmiYoPfZ1qXxww1IJ0m126OjWrIzOS%22%3B%7D; PHPSESSID=11un5kg9lq8i8l0da7sgf13lr7'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\xampp\\htdocs\\yii-1.1.14\\framework;C:\\xampp\\php;~\\.composer\\vendor\\bin\\;C:\\Program Files (x86)\\Microsoft ASP.NET\\ASP.NET Web Pages\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\8.0\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Java\\jdk1.7.0_15\\bin;C:\\Program Files\\Microsoft\\Web Platform Installer\\;C:\\Program Files (x86)\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\ManagementStudio\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Users\\JulyosCesar\\AppData\\Roaming\\npm;C:\\Users\\JulyosCesar\\AppData\\Local\\.meteor\\'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/portalweb/index.php'
+    'REMOTE_PORT' => '59077'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=user%2Fprofile&uguid=68273021-ab01-4389-8c01-fa605f7f845f'
+    'REQUEST_URI' => '/portalweb/index.php?r=user%2Fprofile&uguid=68273021-ab01-4389-8c01-fa605f7f845f'
+    'SCRIPT_NAME' => '/portalweb/index.php'
+    'PHP_SELF' => '/portalweb/index.php'
+    'REQUEST_TIME_FLOAT' => 1471413530.229
+    'REQUEST_TIME' => 1471413530
+]
+2016-08-17 07:59:14 [::1][-][11un5kg9lq8i8l0da7sgf13lr7][error][yii\web\HttpException:401] exception 'yii\web\HttpException' with message '¡Necesitas iniciar sesión para ver este perfil de usuario!' in C:\xampp\htdocs\portalweb\protected\humhub\modules\user\behaviors\ProfileController.php:72
+Stack trace:
+#0 [internal function]: humhub\modules\user\behaviors\ProfileController->checkAccess()
+#1 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Component.php(282): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\portalweb\protected\humhub\modules\content\components\ContentContainerController.php(137): yii\base\Component->__call('checkAccess', Array)
+#3 C:\xampp\htdocs\portalweb\protected\humhub\modules\content\components\ContentContainerController.php(137): humhub\modules\user\controllers\ProfileController->checkAccess()
+#4 C:\xampp\htdocs\portalweb\protected\humhub\modules\content\components\ContentContainerController.php(97): humhub\modules\content\components\ContentContainerController->checkContainerAccess()
+#5 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Object.php(107): humhub\modules\content\components\ContentContainerController->init()
+#6 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Controller.php(84): yii\base\Object->__construct(Array)
+#7 [internal function]: yii\base\Controller->__construct('profile', Object(humhub\modules\user\Module), Array)
+#8 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\di\Container.php(373): ReflectionClass->newInstanceArgs(Array)
+#9 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\di\Container.php(154): yii\di\Container->build('humhub\\modules\\...', Array, Array)
+#10 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\BaseYii.php(340): yii\di\Container->get('humhub\\modules\\...', Array)
+#11 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Module.php(567): yii\BaseYii::createObject('humhub\\modules\\...', Array)
+#12 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Module.php(520): yii\base\Module->createControllerByID('profile')
+#13 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Module.php(512): yii\base\Module->createController('profile')
+#14 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Module.php(448): yii\base\Module->createController('user/profile')
+#15 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('user/profile', Array)
+#16 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#17 C:\xampp\htdocs\portalweb\index.php(25): yii\base\Application->run()
+#18 {main}
+2016-08-17 07:59:14 [::1][-][11un5kg9lq8i8l0da7sgf13lr7][info][application] $_GET = [
+    'r' => 'user/profile'
+    'uguid' => 'e445536f-f62b-45f7-8dd2-0c1f4cddc745'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/portalweb/index.php?r=directory%2Fdirectory%2Fmembers'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8'
+    'HTTP_COOKIE' => 'pm_new-people-panel=expanded; pm_new-spaces-panel=expanded; pm_user-statistics-panel=expanded; _csrf=83bbcbf3a7bb27a4f3e46465cf92ad154109ba02ade2ca5e07c4355cb58bfc9ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22iaAmiYoPfZ1qXxww1IJ0m126OjWrIzOS%22%3B%7D; PHPSESSID=11un5kg9lq8i8l0da7sgf13lr7'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\xampp\\htdocs\\yii-1.1.14\\framework;C:\\xampp\\php;~\\.composer\\vendor\\bin\\;C:\\Program Files (x86)\\Microsoft ASP.NET\\ASP.NET Web Pages\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\8.0\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Java\\jdk1.7.0_15\\bin;C:\\Program Files\\Microsoft\\Web Platform Installer\\;C:\\Program Files (x86)\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\ManagementStudio\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Users\\JulyosCesar\\AppData\\Roaming\\npm;C:\\Users\\JulyosCesar\\AppData\\Local\\.meteor\\'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/portalweb/index.php'
+    'REMOTE_PORT' => '59087'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=user%2Fprofile&uguid=e445536f-f62b-45f7-8dd2-0c1f4cddc745'
+    'REQUEST_URI' => '/portalweb/index.php?r=user%2Fprofile&uguid=e445536f-f62b-45f7-8dd2-0c1f4cddc745'
+    'SCRIPT_NAME' => '/portalweb/index.php'
+    'PHP_SELF' => '/portalweb/index.php'
+    'REQUEST_TIME_FLOAT' => 1471413554.004
+    'REQUEST_TIME' => 1471413554
+]
+2016-08-17 08:20:52 [::1][-][11un5kg9lq8i8l0da7sgf13lr7][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: user/registration/index2' in C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Controller.php:125
+Stack trace:
+#0 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index2', Array)
+#1 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('user/registrati...', Array)
+#2 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#3 C:\xampp\htdocs\portalweb\index.php(25): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Página no encontrada.' in C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\Application.php:99
+Stack trace:
+#0 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#1 C:\xampp\htdocs\portalweb\index.php(25): yii\base\Application->run()
+#2 {main}
+2016-08-17 08:20:52 [::1][-][11un5kg9lq8i8l0da7sgf13lr7][info][application] $_GET = [
+    'r' => 'user/registration/index2'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8'
+    'HTTP_COOKIE' => 'pm_new-people-panel=expanded; pm_new-spaces-panel=expanded; pm_user-statistics-panel=expanded; pm_spaces-statistics-panel=expanded; _csrf=83bbcbf3a7bb27a4f3e46465cf92ad154109ba02ade2ca5e07c4355cb58bfc9ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22iaAmiYoPfZ1qXxww1IJ0m126OjWrIzOS%22%3B%7D; PHPSESSID=11un5kg9lq8i8l0da7sgf13lr7'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\xampp\\htdocs\\yii-1.1.14\\framework;C:\\xampp\\php;~\\.composer\\vendor\\bin\\;C:\\Program Files (x86)\\Microsoft ASP.NET\\ASP.NET Web Pages\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\8.0\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Java\\jdk1.7.0_15\\bin;C:\\Program Files\\Microsoft\\Web Platform Installer\\;C:\\Program Files (x86)\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\ManagementStudio\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Users\\JulyosCesar\\AppData\\Roaming\\npm;C:\\Users\\JulyosCesar\\AppData\\Local\\.meteor\\'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/portalweb/index.php'
+    'REMOTE_PORT' => '59347'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=user%2Fregistration%2Findex2'
+    'REQUEST_URI' => '/portalweb/index.php?r=user%2Fregistration%2Findex2'
+    'SCRIPT_NAME' => '/portalweb/index.php'
+    'PHP_SELF' => '/portalweb/index.php'
+    'REQUEST_TIME_FLOAT' => 1471414852.021
+    'REQUEST_TIME' => 1471414852
+]
+2016-08-17 08:21:05 [::1][-][11un5kg9lq8i8l0da7sgf13lr7][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: user/registration/index2' in C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Controller.php:125
+Stack trace:
+#0 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index2', Array)
+#1 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('user/registrati...', Array)
+#2 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#3 C:\xampp\htdocs\portalweb\index.php(25): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Página no encontrada.' in C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\Application.php:99
+Stack trace:
+#0 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#1 C:\xampp\htdocs\portalweb\index.php(25): yii\base\Application->run()
+#2 {main}
+2016-08-17 08:21:05 [::1][-][11un5kg9lq8i8l0da7sgf13lr7][info][application] $_GET = [
+    'r' => 'user/registration/index2'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8'
+    'HTTP_COOKIE' => 'pm_new-people-panel=expanded; pm_new-spaces-panel=expanded; pm_user-statistics-panel=expanded; pm_spaces-statistics-panel=expanded; _csrf=83bbcbf3a7bb27a4f3e46465cf92ad154109ba02ade2ca5e07c4355cb58bfc9ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22iaAmiYoPfZ1qXxww1IJ0m126OjWrIzOS%22%3B%7D; PHPSESSID=11un5kg9lq8i8l0da7sgf13lr7'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\xampp\\htdocs\\yii-1.1.14\\framework;C:\\xampp\\php;~\\.composer\\vendor\\bin\\;C:\\Program Files (x86)\\Microsoft ASP.NET\\ASP.NET Web Pages\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\8.0\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Java\\jdk1.7.0_15\\bin;C:\\Program Files\\Microsoft\\Web Platform Installer\\;C:\\Program Files (x86)\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\ManagementStudio\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Users\\JulyosCesar\\AppData\\Roaming\\npm;C:\\Users\\JulyosCesar\\AppData\\Local\\.meteor\\'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/portalweb/index.php'
+    'REMOTE_PORT' => '59357'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=user%2Fregistration%2Findex2'
+    'REQUEST_URI' => '/portalweb/index.php?r=user%2Fregistration%2Findex2'
+    'SCRIPT_NAME' => '/portalweb/index.php'
+    'PHP_SELF' => '/portalweb/index.php'
+    'REQUEST_TIME_FLOAT' => 1471414865.66
+    'REQUEST_TIME' => 1471414865
+]
+2016-08-17 08:21:37 [::1][-][11un5kg9lq8i8l0da7sgf13lr7][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: user/registration/registration' in C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Controller.php:125
+Stack trace:
+#0 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('registration', Array)
+#1 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('user/registrati...', Array)
+#2 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#3 C:\xampp\htdocs\portalweb\index.php(25): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Página no encontrada.' in C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\Application.php:99
+Stack trace:
+#0 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#1 C:\xampp\htdocs\portalweb\index.php(25): yii\base\Application->run()
+#2 {main}
+2016-08-17 08:21:37 [::1][-][11un5kg9lq8i8l0da7sgf13lr7][info][application] $_GET = [
+    'r' => 'user/registration/registration'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8'
+    'HTTP_COOKIE' => 'pm_new-people-panel=expanded; pm_new-spaces-panel=expanded; pm_user-statistics-panel=expanded; pm_spaces-statistics-panel=expanded; _csrf=83bbcbf3a7bb27a4f3e46465cf92ad154109ba02ade2ca5e07c4355cb58bfc9ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22iaAmiYoPfZ1qXxww1IJ0m126OjWrIzOS%22%3B%7D; PHPSESSID=11un5kg9lq8i8l0da7sgf13lr7'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\xampp\\htdocs\\yii-1.1.14\\framework;C:\\xampp\\php;~\\.composer\\vendor\\bin\\;C:\\Program Files (x86)\\Microsoft ASP.NET\\ASP.NET Web Pages\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\8.0\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Java\\jdk1.7.0_15\\bin;C:\\Program Files\\Microsoft\\Web Platform Installer\\;C:\\Program Files (x86)\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\ManagementStudio\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Users\\JulyosCesar\\AppData\\Roaming\\npm;C:\\Users\\JulyosCesar\\AppData\\Local\\.meteor\\'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/portalweb/index.php'
+    'REMOTE_PORT' => '59367'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=user%2Fregistration%2Fregistration'
+    'REQUEST_URI' => '/portalweb/index.php?r=user%2Fregistration%2Fregistration'
+    'SCRIPT_NAME' => '/portalweb/index.php'
+    'PHP_SELF' => '/portalweb/index.php'
+    'REQUEST_TIME_FLOAT' => 1471414897.505
+    'REQUEST_TIME' => 1471414897
+]
+2016-08-17 08:22:45 [::1][-][s3o1lp1b30kiqufc90q5pb5t11][error][yii\web\HttpException:403] exception 'yii\web\ForbiddenHttpException' with message 'Login Requerido' in C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\User.php:435
+Stack trace:
+#0 C:\xampp\htdocs\portalweb\protected\humhub\components\behaviors\AccessControl.php(75): yii\web\User->loginRequired()
+#1 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\ActionFilter.php(73): humhub\components\behaviors\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Component.php(541): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Controller.php(269): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\Controller.php(108): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 C:\xampp\htdocs\portalweb\protected\humhub\components\Controller.php(68): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Controller.php(152): humhub\components\Controller->beforeAction(Object(yii\base\InlineAction))
+#8 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('get-update-json', Array)
+#9 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('notification/li...', Array)
+#10 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#11 C:\xampp\htdocs\portalweb\index.php(25): yii\base\Application->run()
+#12 {main}
+2016-08-17 08:22:45 [::1][-][s3o1lp1b30kiqufc90q5pb5t11][info][application] $_GET = [
+    'r' => 'notification/list/get-update-json'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'MWRaY19oWmV0LRw0ElgNEAM8GC4YGGwAXTsuVAckIy1GDwwHDDsDNQ=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/portalweb/index.php?r=admin%2Fuser-profile'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8'
+    'HTTP_COOKIE' => 'pm_user-tags-panel=expanded; pm_user-spaces-panel=expanded; pm_getting-started-panel=expanded; pm_new-people-panel=expanded; pm_new-spaces-panel=expanded; _csrf=452f0f8fe6203cce44d56f816a6ebd3ad6b339e68f29e7194e66780cd979f1a4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BR39K_8t6eZY5h0lnqf3mJz1gl2xAqR1%22%3B%7D; PHPSESSID=s3o1lp1b30kiqufc90q5pb5t11; _identity=434251207dbc87b009b23ee143030d7646e1afb516d6b9a0244d0f6273d19c76a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%22b30c1540-467d-4711-8d0b-956529a162f8%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\xampp\\htdocs\\yii-1.1.14\\framework;C:\\xampp\\php;~\\.composer\\vendor\\bin\\;C:\\Program Files (x86)\\Microsoft ASP.NET\\ASP.NET Web Pages\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\8.0\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Java\\jdk1.7.0_15\\bin;C:\\Program Files\\Microsoft\\Web Platform Installer\\;C:\\Program Files (x86)\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\ManagementStudio\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Users\\JulyosCesar\\AppData\\Roaming\\npm;C:\\Users\\JulyosCesar\\AppData\\Local\\.meteor\\'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/portalweb/index.php'
+    'REMOTE_PORT' => '59396'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=notification%2Flist%2Fget-update-json'
+    'REQUEST_URI' => '/portalweb/index.php?r=notification%2Flist%2Fget-update-json'
+    'SCRIPT_NAME' => '/portalweb/index.php'
+    'PHP_SELF' => '/portalweb/index.php'
+    'REQUEST_TIME_FLOAT' => 1471414965.165
+    'REQUEST_TIME' => 1471414965
+]
+2016-08-17 08:23:05 [::1][-][s3o1lp1b30kiqufc90q5pb5t11][error][yii\web\HttpException:403] exception 'yii\web\ForbiddenHttpException' with message 'Login Requerido' in C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\User.php:435
+Stack trace:
+#0 C:\xampp\htdocs\portalweb\protected\humhub\components\behaviors\AccessControl.php(75): yii\web\User->loginRequired()
+#1 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\ActionFilter.php(73): humhub\components\behaviors\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Component.php(541): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Controller.php(269): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\Controller.php(108): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 C:\xampp\htdocs\portalweb\protected\humhub\components\Controller.php(68): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Controller.php(152): humhub\components\Controller->beforeAction(Object(yii\base\InlineAction))
+#8 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('get-update-json', Array)
+#9 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('notification/li...', Array)
+#10 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#11 C:\xampp\htdocs\portalweb\index.php(25): yii\base\Application->run()
+#12 {main}
+2016-08-17 08:23:05 [::1][-][s3o1lp1b30kiqufc90q5pb5t11][info][application] $_GET = [
+    'r' => 'notification/list/get-update-json'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'MWRaY19oWmV0LRw0ElgNEAM8GC4YGGwAXTsuVAckIy1GDwwHDDsDNQ=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/portalweb/index.php?r=admin%2Fuser-profile'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8'
+    'HTTP_COOKIE' => 'pm_user-tags-panel=expanded; pm_user-spaces-panel=expanded; pm_getting-started-panel=expanded; pm_new-people-panel=expanded; pm_new-spaces-panel=expanded; _csrf=452f0f8fe6203cce44d56f816a6ebd3ad6b339e68f29e7194e66780cd979f1a4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BR39K_8t6eZY5h0lnqf3mJz1gl2xAqR1%22%3B%7D; PHPSESSID=s3o1lp1b30kiqufc90q5pb5t11; _identity=434251207dbc87b009b23ee143030d7646e1afb516d6b9a0244d0f6273d19c76a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%22b30c1540-467d-4711-8d0b-956529a162f8%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\xampp\\htdocs\\yii-1.1.14\\framework;C:\\xampp\\php;~\\.composer\\vendor\\bin\\;C:\\Program Files (x86)\\Microsoft ASP.NET\\ASP.NET Web Pages\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\8.0\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Java\\jdk1.7.0_15\\bin;C:\\Program Files\\Microsoft\\Web Platform Installer\\;C:\\Program Files (x86)\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\ManagementStudio\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Users\\JulyosCesar\\AppData\\Roaming\\npm;C:\\Users\\JulyosCesar\\AppData\\Local\\.meteor\\'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/portalweb/index.php'
+    'REMOTE_PORT' => '59418'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=notification%2Flist%2Fget-update-json'
+    'REQUEST_URI' => '/portalweb/index.php?r=notification%2Flist%2Fget-update-json'
+    'SCRIPT_NAME' => '/portalweb/index.php'
+    'PHP_SELF' => '/portalweb/index.php'
+    'REQUEST_TIME_FLOAT' => 1471414985.166
+    'REQUEST_TIME' => 1471414985
+]
+2016-08-17 08:23:25 [::1][-][s3o1lp1b30kiqufc90q5pb5t11][error][yii\web\HttpException:403] exception 'yii\web\ForbiddenHttpException' with message 'Login Requerido' in C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\User.php:435
+Stack trace:
+#0 C:\xampp\htdocs\portalweb\protected\humhub\components\behaviors\AccessControl.php(75): yii\web\User->loginRequired()
+#1 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\ActionFilter.php(73): humhub\components\behaviors\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Component.php(541): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Controller.php(269): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\Controller.php(108): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 C:\xampp\htdocs\portalweb\protected\humhub\components\Controller.php(68): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Controller.php(152): humhub\components\Controller->beforeAction(Object(yii\base\InlineAction))
+#8 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('get-update-json', Array)
+#9 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('notification/li...', Array)
+#10 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#11 C:\xampp\htdocs\portalweb\index.php(25): yii\base\Application->run()
+#12 {main}
+2016-08-17 08:23:25 [::1][-][s3o1lp1b30kiqufc90q5pb5t11][info][application] $_GET = [
+    'r' => 'notification/list/get-update-json'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'MWRaY19oWmV0LRw0ElgNEAM8GC4YGGwAXTsuVAckIy1GDwwHDDsDNQ=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/portalweb/index.php?r=admin%2Fuser-profile'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8'
+    'HTTP_COOKIE' => 'pm_user-tags-panel=expanded; pm_user-spaces-panel=expanded; pm_getting-started-panel=expanded; pm_new-people-panel=expanded; pm_new-spaces-panel=expanded; _csrf=452f0f8fe6203cce44d56f816a6ebd3ad6b339e68f29e7194e66780cd979f1a4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BR39K_8t6eZY5h0lnqf3mJz1gl2xAqR1%22%3B%7D; PHPSESSID=s3o1lp1b30kiqufc90q5pb5t11; _identity=434251207dbc87b009b23ee143030d7646e1afb516d6b9a0244d0f6273d19c76a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%22b30c1540-467d-4711-8d0b-956529a162f8%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\xampp\\htdocs\\yii-1.1.14\\framework;C:\\xampp\\php;~\\.composer\\vendor\\bin\\;C:\\Program Files (x86)\\Microsoft ASP.NET\\ASP.NET Web Pages\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\8.0\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Java\\jdk1.7.0_15\\bin;C:\\Program Files\\Microsoft\\Web Platform Installer\\;C:\\Program Files (x86)\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\ManagementStudio\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Users\\JulyosCesar\\AppData\\Roaming\\npm;C:\\Users\\JulyosCesar\\AppData\\Local\\.meteor\\'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/portalweb/index.php'
+    'REMOTE_PORT' => '59422'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=notification%2Flist%2Fget-update-json'
+    'REQUEST_URI' => '/portalweb/index.php?r=notification%2Flist%2Fget-update-json'
+    'SCRIPT_NAME' => '/portalweb/index.php'
+    'PHP_SELF' => '/portalweb/index.php'
+    'REQUEST_TIME_FLOAT' => 1471415005.166
+    'REQUEST_TIME' => 1471415005
+]
+2016-08-17 08:23:45 [::1][-][e9gqqp5qjsmujk7adold0lqvu1][error][yii\web\HttpException:403] exception 'yii\web\ForbiddenHttpException' with message 'Login Requerido' in C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\User.php:435
+Stack trace:
+#0 C:\xampp\htdocs\portalweb\protected\humhub\components\behaviors\AccessControl.php(75): yii\web\User->loginRequired()
+#1 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\ActionFilter.php(73): humhub\components\behaviors\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Component.php(541): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Controller.php(269): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\Controller.php(108): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 C:\xampp\htdocs\portalweb\protected\humhub\components\Controller.php(68): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Controller.php(152): humhub\components\Controller->beforeAction(Object(yii\base\InlineAction))
+#8 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('get-update-json', Array)
+#9 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('notification/li...', Array)
+#10 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#11 C:\xampp\htdocs\portalweb\index.php(25): yii\base\Application->run()
+#12 {main}
+2016-08-17 08:23:45 [::1][-][e9gqqp5qjsmujk7adold0lqvu1][info][application] $_GET = [
+    'r' => 'notification/list/get-update-json'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'MWRaY19oWmV0LRw0ElgNEAM8GC4YGGwAXTsuVAckIy1GDwwHDDsDNQ=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/portalweb/index.php?r=admin%2Fuser-profile'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8'
+    'HTTP_COOKIE' => 'pm_user-tags-panel=expanded; pm_user-spaces-panel=expanded; pm_getting-started-panel=expanded; pm_new-people-panel=expanded; pm_new-spaces-panel=expanded; _csrf=452f0f8fe6203cce44d56f816a6ebd3ad6b339e68f29e7194e66780cd979f1a4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BR39K_8t6eZY5h0lnqf3mJz1gl2xAqR1%22%3B%7D; PHPSESSID=e9gqqp5qjsmujk7adold0lqvu1'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\xampp\\htdocs\\yii-1.1.14\\framework;C:\\xampp\\php;~\\.composer\\vendor\\bin\\;C:\\Program Files (x86)\\Microsoft ASP.NET\\ASP.NET Web Pages\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\8.0\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Java\\jdk1.7.0_15\\bin;C:\\Program Files\\Microsoft\\Web Platform Installer\\;C:\\Program Files (x86)\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\ManagementStudio\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Users\\JulyosCesar\\AppData\\Roaming\\npm;C:\\Users\\JulyosCesar\\AppData\\Local\\.meteor\\'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/portalweb/index.php'
+    'REMOTE_PORT' => '59434'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=notification%2Flist%2Fget-update-json'
+    'REQUEST_URI' => '/portalweb/index.php?r=notification%2Flist%2Fget-update-json'
+    'SCRIPT_NAME' => '/portalweb/index.php'
+    'PHP_SELF' => '/portalweb/index.php'
+    'REQUEST_TIME_FLOAT' => 1471415025.166
+    'REQUEST_TIME' => 1471415025
+]
+2016-08-17 08:24:05 [::1][-][e9gqqp5qjsmujk7adold0lqvu1][error][yii\web\HttpException:403] exception 'yii\web\ForbiddenHttpException' with message 'Login Requerido' in C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\User.php:435
+Stack trace:
+#0 C:\xampp\htdocs\portalweb\protected\humhub\components\behaviors\AccessControl.php(75): yii\web\User->loginRequired()
+#1 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\ActionFilter.php(73): humhub\components\behaviors\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Component.php(541): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Controller.php(269): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\Controller.php(108): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 C:\xampp\htdocs\portalweb\protected\humhub\components\Controller.php(68): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Controller.php(152): humhub\components\Controller->beforeAction(Object(yii\base\InlineAction))
+#8 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('get-update-json', Array)
+#9 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('notification/li...', Array)
+#10 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#11 C:\xampp\htdocs\portalweb\index.php(25): yii\base\Application->run()
+#12 {main}
+2016-08-17 08:24:05 [::1][-][e9gqqp5qjsmujk7adold0lqvu1][info][application] $_GET = [
+    'r' => 'notification/list/get-update-json'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'MWRaY19oWmV0LRw0ElgNEAM8GC4YGGwAXTsuVAckIy1GDwwHDDsDNQ=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/portalweb/index.php?r=admin%2Fuser-profile'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8'
+    'HTTP_COOKIE' => 'pm_user-tags-panel=expanded; pm_user-spaces-panel=expanded; pm_getting-started-panel=expanded; pm_new-people-panel=expanded; pm_new-spaces-panel=expanded; _csrf=452f0f8fe6203cce44d56f816a6ebd3ad6b339e68f29e7194e66780cd979f1a4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BR39K_8t6eZY5h0lnqf3mJz1gl2xAqR1%22%3B%7D; PHPSESSID=e9gqqp5qjsmujk7adold0lqvu1'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\xampp\\htdocs\\yii-1.1.14\\framework;C:\\xampp\\php;~\\.composer\\vendor\\bin\\;C:\\Program Files (x86)\\Microsoft ASP.NET\\ASP.NET Web Pages\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\8.0\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Java\\jdk1.7.0_15\\bin;C:\\Program Files\\Microsoft\\Web Platform Installer\\;C:\\Program Files (x86)\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\ManagementStudio\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Users\\JulyosCesar\\AppData\\Roaming\\npm;C:\\Users\\JulyosCesar\\AppData\\Local\\.meteor\\'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/portalweb/index.php'
+    'REMOTE_PORT' => '59438'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=notification%2Flist%2Fget-update-json'
+    'REQUEST_URI' => '/portalweb/index.php?r=notification%2Flist%2Fget-update-json'
+    'SCRIPT_NAME' => '/portalweb/index.php'
+    'PHP_SELF' => '/portalweb/index.php'
+    'REQUEST_TIME_FLOAT' => 1471415045.167
+    'REQUEST_TIME' => 1471415045
+]
+2016-08-17 08:24:25 [::1][-][e9gqqp5qjsmujk7adold0lqvu1][error][yii\web\HttpException:403] exception 'yii\web\ForbiddenHttpException' with message 'Login Requerido' in C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\User.php:435
+Stack trace:
+#0 C:\xampp\htdocs\portalweb\protected\humhub\components\behaviors\AccessControl.php(75): yii\web\User->loginRequired()
+#1 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\ActionFilter.php(73): humhub\components\behaviors\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Component.php(541): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Controller.php(269): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\Controller.php(108): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 C:\xampp\htdocs\portalweb\protected\humhub\components\Controller.php(68): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Controller.php(152): humhub\components\Controller->beforeAction(Object(yii\base\InlineAction))
+#8 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('get-update-json', Array)
+#9 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('notification/li...', Array)
+#10 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#11 C:\xampp\htdocs\portalweb\index.php(25): yii\base\Application->run()
+#12 {main}
+2016-08-17 08:24:25 [::1][-][e9gqqp5qjsmujk7adold0lqvu1][info][application] $_GET = [
+    'r' => 'notification/list/get-update-json'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'MWRaY19oWmV0LRw0ElgNEAM8GC4YGGwAXTsuVAckIy1GDwwHDDsDNQ=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/portalweb/index.php?r=admin%2Fuser-profile'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8'
+    'HTTP_COOKIE' => 'pm_user-tags-panel=expanded; pm_user-spaces-panel=expanded; pm_getting-started-panel=expanded; pm_new-people-panel=expanded; pm_new-spaces-panel=expanded; _csrf=452f0f8fe6203cce44d56f816a6ebd3ad6b339e68f29e7194e66780cd979f1a4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BR39K_8t6eZY5h0lnqf3mJz1gl2xAqR1%22%3B%7D; PHPSESSID=e9gqqp5qjsmujk7adold0lqvu1'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\xampp\\htdocs\\yii-1.1.14\\framework;C:\\xampp\\php;~\\.composer\\vendor\\bin\\;C:\\Program Files (x86)\\Microsoft ASP.NET\\ASP.NET Web Pages\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\8.0\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Java\\jdk1.7.0_15\\bin;C:\\Program Files\\Microsoft\\Web Platform Installer\\;C:\\Program Files (x86)\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\ManagementStudio\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Users\\JulyosCesar\\AppData\\Roaming\\npm;C:\\Users\\JulyosCesar\\AppData\\Local\\.meteor\\'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/portalweb/index.php'
+    'REMOTE_PORT' => '59440'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=notification%2Flist%2Fget-update-json'
+    'REQUEST_URI' => '/portalweb/index.php?r=notification%2Flist%2Fget-update-json'
+    'SCRIPT_NAME' => '/portalweb/index.php'
+    'PHP_SELF' => '/portalweb/index.php'
+    'REQUEST_TIME_FLOAT' => 1471415065.167
+    'REQUEST_TIME' => 1471415065
+]
+2016-08-17 08:24:45 [::1][-][e9gqqp5qjsmujk7adold0lqvu1][error][yii\web\HttpException:403] exception 'yii\web\ForbiddenHttpException' with message 'Login Requerido' in C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\User.php:435
+Stack trace:
+#0 C:\xampp\htdocs\portalweb\protected\humhub\components\behaviors\AccessControl.php(75): yii\web\User->loginRequired()
+#1 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\ActionFilter.php(73): humhub\components\behaviors\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Component.php(541): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Controller.php(269): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\Controller.php(108): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 C:\xampp\htdocs\portalweb\protected\humhub\components\Controller.php(68): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Controller.php(152): humhub\components\Controller->beforeAction(Object(yii\base\InlineAction))
+#8 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('get-update-json', Array)
+#9 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('notification/li...', Array)
+#10 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#11 C:\xampp\htdocs\portalweb\index.php(25): yii\base\Application->run()
+#12 {main}
+2016-08-17 08:24:45 [::1][-][e9gqqp5qjsmujk7adold0lqvu1][info][application] $_GET = [
+    'r' => 'notification/list/get-update-json'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'MWRaY19oWmV0LRw0ElgNEAM8GC4YGGwAXTsuVAckIy1GDwwHDDsDNQ=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/portalweb/index.php?r=admin%2Fuser-profile'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8'
+    'HTTP_COOKIE' => 'pm_user-tags-panel=expanded; pm_user-spaces-panel=expanded; pm_getting-started-panel=expanded; pm_new-people-panel=expanded; pm_new-spaces-panel=expanded; _csrf=452f0f8fe6203cce44d56f816a6ebd3ad6b339e68f29e7194e66780cd979f1a4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BR39K_8t6eZY5h0lnqf3mJz1gl2xAqR1%22%3B%7D; PHPSESSID=e9gqqp5qjsmujk7adold0lqvu1'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\xampp\\htdocs\\yii-1.1.14\\framework;C:\\xampp\\php;~\\.composer\\vendor\\bin\\;C:\\Program Files (x86)\\Microsoft ASP.NET\\ASP.NET Web Pages\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\8.0\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Java\\jdk1.7.0_15\\bin;C:\\Program Files\\Microsoft\\Web Platform Installer\\;C:\\Program Files (x86)\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\ManagementStudio\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Users\\JulyosCesar\\AppData\\Roaming\\npm;C:\\Users\\JulyosCesar\\AppData\\Local\\.meteor\\'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/portalweb/index.php'
+    'REMOTE_PORT' => '59442'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=notification%2Flist%2Fget-update-json'
+    'REQUEST_URI' => '/portalweb/index.php?r=notification%2Flist%2Fget-update-json'
+    'SCRIPT_NAME' => '/portalweb/index.php'
+    'PHP_SELF' => '/portalweb/index.php'
+    'REQUEST_TIME_FLOAT' => 1471415085.168
+    'REQUEST_TIME' => 1471415085
+]
+2016-08-17 08:25:05 [::1][-][e9gqqp5qjsmujk7adold0lqvu1][error][yii\web\HttpException:403] exception 'yii\web\ForbiddenHttpException' with message 'Login Requerido' in C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\User.php:435
+Stack trace:
+#0 C:\xampp\htdocs\portalweb\protected\humhub\components\behaviors\AccessControl.php(75): yii\web\User->loginRequired()
+#1 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\ActionFilter.php(73): humhub\components\behaviors\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Component.php(541): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Controller.php(269): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\Controller.php(108): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 C:\xampp\htdocs\portalweb\protected\humhub\components\Controller.php(68): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Controller.php(152): humhub\components\Controller->beforeAction(Object(yii\base\InlineAction))
+#8 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('get-update-json', Array)
+#9 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('notification/li...', Array)
+#10 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#11 C:\xampp\htdocs\portalweb\index.php(25): yii\base\Application->run()
+#12 {main}
+2016-08-17 08:25:05 [::1][-][e9gqqp5qjsmujk7adold0lqvu1][info][application] $_GET = [
+    'r' => 'notification/list/get-update-json'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'MWRaY19oWmV0LRw0ElgNEAM8GC4YGGwAXTsuVAckIy1GDwwHDDsDNQ=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/portalweb/index.php?r=admin%2Fuser-profile'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8'
+    'HTTP_COOKIE' => 'pm_user-tags-panel=expanded; pm_user-spaces-panel=expanded; pm_getting-started-panel=expanded; pm_new-people-panel=expanded; pm_new-spaces-panel=expanded; _csrf=452f0f8fe6203cce44d56f816a6ebd3ad6b339e68f29e7194e66780cd979f1a4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BR39K_8t6eZY5h0lnqf3mJz1gl2xAqR1%22%3B%7D; PHPSESSID=e9gqqp5qjsmujk7adold0lqvu1'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\xampp\\htdocs\\yii-1.1.14\\framework;C:\\xampp\\php;~\\.composer\\vendor\\bin\\;C:\\Program Files (x86)\\Microsoft ASP.NET\\ASP.NET Web Pages\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\8.0\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Java\\jdk1.7.0_15\\bin;C:\\Program Files\\Microsoft\\Web Platform Installer\\;C:\\Program Files (x86)\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\ManagementStudio\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Users\\JulyosCesar\\AppData\\Roaming\\npm;C:\\Users\\JulyosCesar\\AppData\\Local\\.meteor\\'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/portalweb/index.php'
+    'REMOTE_PORT' => '59448'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=notification%2Flist%2Fget-update-json'
+    'REQUEST_URI' => '/portalweb/index.php?r=notification%2Flist%2Fget-update-json'
+    'SCRIPT_NAME' => '/portalweb/index.php'
+    'PHP_SELF' => '/portalweb/index.php'
+    'REQUEST_TIME_FLOAT' => 1471415105.168
+    'REQUEST_TIME' => 1471415105
+]
+2016-08-17 08:25:25 [::1][-][e9gqqp5qjsmujk7adold0lqvu1][error][yii\web\HttpException:403] exception 'yii\web\ForbiddenHttpException' with message 'Login Requerido' in C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\User.php:435
+Stack trace:
+#0 C:\xampp\htdocs\portalweb\protected\humhub\components\behaviors\AccessControl.php(75): yii\web\User->loginRequired()
+#1 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\ActionFilter.php(73): humhub\components\behaviors\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Component.php(541): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Controller.php(269): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\Controller.php(108): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 C:\xampp\htdocs\portalweb\protected\humhub\components\Controller.php(68): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Controller.php(152): humhub\components\Controller->beforeAction(Object(yii\base\InlineAction))
+#8 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('get-update-json', Array)
+#9 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('notification/li...', Array)
+#10 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#11 C:\xampp\htdocs\portalweb\index.php(25): yii\base\Application->run()
+#12 {main}
+2016-08-17 08:25:25 [::1][-][e9gqqp5qjsmujk7adold0lqvu1][info][application] $_GET = [
+    'r' => 'notification/list/get-update-json'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'MWRaY19oWmV0LRw0ElgNEAM8GC4YGGwAXTsuVAckIy1GDwwHDDsDNQ=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/portalweb/index.php?r=admin%2Fuser-profile'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8'
+    'HTTP_COOKIE' => 'pm_user-tags-panel=expanded; pm_user-spaces-panel=expanded; pm_getting-started-panel=expanded; pm_new-people-panel=expanded; pm_new-spaces-panel=expanded; _csrf=452f0f8fe6203cce44d56f816a6ebd3ad6b339e68f29e7194e66780cd979f1a4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BR39K_8t6eZY5h0lnqf3mJz1gl2xAqR1%22%3B%7D; PHPSESSID=e9gqqp5qjsmujk7adold0lqvu1'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\xampp\\htdocs\\yii-1.1.14\\framework;C:\\xampp\\php;~\\.composer\\vendor\\bin\\;C:\\Program Files (x86)\\Microsoft ASP.NET\\ASP.NET Web Pages\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\8.0\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Java\\jdk1.7.0_15\\bin;C:\\Program Files\\Microsoft\\Web Platform Installer\\;C:\\Program Files (x86)\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\ManagementStudio\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Users\\JulyosCesar\\AppData\\Roaming\\npm;C:\\Users\\JulyosCesar\\AppData\\Local\\.meteor\\'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/portalweb/index.php'
+    'REMOTE_PORT' => '59450'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=notification%2Flist%2Fget-update-json'
+    'REQUEST_URI' => '/portalweb/index.php?r=notification%2Flist%2Fget-update-json'
+    'SCRIPT_NAME' => '/portalweb/index.php'
+    'PHP_SELF' => '/portalweb/index.php'
+    'REQUEST_TIME_FLOAT' => 1471415125.172
+    'REQUEST_TIME' => 1471415125
+]
+2016-08-17 08:25:45 [::1][-][e9gqqp5qjsmujk7adold0lqvu1][error][yii\web\HttpException:403] exception 'yii\web\ForbiddenHttpException' with message 'Login Requerido' in C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\User.php:435
+Stack trace:
+#0 C:\xampp\htdocs\portalweb\protected\humhub\components\behaviors\AccessControl.php(75): yii\web\User->loginRequired()
+#1 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\ActionFilter.php(73): humhub\components\behaviors\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Component.php(541): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Controller.php(269): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\Controller.php(108): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 C:\xampp\htdocs\portalweb\protected\humhub\components\Controller.php(68): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Controller.php(152): humhub\components\Controller->beforeAction(Object(yii\base\InlineAction))
+#8 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('get-update-json', Array)
+#9 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('notification/li...', Array)
+#10 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#11 C:\xampp\htdocs\portalweb\index.php(25): yii\base\Application->run()
+#12 {main}
+2016-08-17 08:25:45 [::1][-][e9gqqp5qjsmujk7adold0lqvu1][info][application] $_GET = [
+    'r' => 'notification/list/get-update-json'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'MWRaY19oWmV0LRw0ElgNEAM8GC4YGGwAXTsuVAckIy1GDwwHDDsDNQ=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/portalweb/index.php?r=admin%2Fuser-profile'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8'
+    'HTTP_COOKIE' => 'pm_user-tags-panel=expanded; pm_user-spaces-panel=expanded; pm_getting-started-panel=expanded; pm_new-people-panel=expanded; pm_new-spaces-panel=expanded; _csrf=452f0f8fe6203cce44d56f816a6ebd3ad6b339e68f29e7194e66780cd979f1a4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BR39K_8t6eZY5h0lnqf3mJz1gl2xAqR1%22%3B%7D; PHPSESSID=e9gqqp5qjsmujk7adold0lqvu1'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\xampp\\htdocs\\yii-1.1.14\\framework;C:\\xampp\\php;~\\.composer\\vendor\\bin\\;C:\\Program Files (x86)\\Microsoft ASP.NET\\ASP.NET Web Pages\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\8.0\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Java\\jdk1.7.0_15\\bin;C:\\Program Files\\Microsoft\\Web Platform Installer\\;C:\\Program Files (x86)\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\ManagementStudio\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Users\\JulyosCesar\\AppData\\Roaming\\npm;C:\\Users\\JulyosCesar\\AppData\\Local\\.meteor\\'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/portalweb/index.php'
+    'REMOTE_PORT' => '59454'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=notification%2Flist%2Fget-update-json'
+    'REQUEST_URI' => '/portalweb/index.php?r=notification%2Flist%2Fget-update-json'
+    'SCRIPT_NAME' => '/portalweb/index.php'
+    'PHP_SELF' => '/portalweb/index.php'
+    'REQUEST_TIME_FLOAT' => 1471415145.167
+    'REQUEST_TIME' => 1471415145
+]
+2016-08-17 08:26:05 [::1][-][e9gqqp5qjsmujk7adold0lqvu1][error][yii\web\HttpException:403] exception 'yii\web\ForbiddenHttpException' with message 'Login Requerido' in C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\User.php:435
+Stack trace:
+#0 C:\xampp\htdocs\portalweb\protected\humhub\components\behaviors\AccessControl.php(75): yii\web\User->loginRequired()
+#1 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\ActionFilter.php(73): humhub\components\behaviors\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Component.php(541): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Controller.php(269): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\Controller.php(108): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 C:\xampp\htdocs\portalweb\protected\humhub\components\Controller.php(68): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Controller.php(152): humhub\components\Controller->beforeAction(Object(yii\base\InlineAction))
+#8 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('get-update-json', Array)
+#9 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('notification/li...', Array)
+#10 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#11 C:\xampp\htdocs\portalweb\index.php(25): yii\base\Application->run()
+#12 {main}
+2016-08-17 08:26:05 [::1][-][e9gqqp5qjsmujk7adold0lqvu1][info][application] $_GET = [
+    'r' => 'notification/list/get-update-json'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'MWRaY19oWmV0LRw0ElgNEAM8GC4YGGwAXTsuVAckIy1GDwwHDDsDNQ=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/portalweb/index.php?r=admin%2Fuser-profile'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8'
+    'HTTP_COOKIE' => 'pm_user-tags-panel=expanded; pm_user-spaces-panel=expanded; pm_getting-started-panel=expanded; pm_new-people-panel=expanded; pm_new-spaces-panel=expanded; _csrf=452f0f8fe6203cce44d56f816a6ebd3ad6b339e68f29e7194e66780cd979f1a4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BR39K_8t6eZY5h0lnqf3mJz1gl2xAqR1%22%3B%7D; PHPSESSID=e9gqqp5qjsmujk7adold0lqvu1'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\xampp\\htdocs\\yii-1.1.14\\framework;C:\\xampp\\php;~\\.composer\\vendor\\bin\\;C:\\Program Files (x86)\\Microsoft ASP.NET\\ASP.NET Web Pages\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\8.0\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Java\\jdk1.7.0_15\\bin;C:\\Program Files\\Microsoft\\Web Platform Installer\\;C:\\Program Files (x86)\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\ManagementStudio\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Users\\JulyosCesar\\AppData\\Roaming\\npm;C:\\Users\\JulyosCesar\\AppData\\Local\\.meteor\\'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/portalweb/index.php'
+    'REMOTE_PORT' => '59458'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=notification%2Flist%2Fget-update-json'
+    'REQUEST_URI' => '/portalweb/index.php?r=notification%2Flist%2Fget-update-json'
+    'SCRIPT_NAME' => '/portalweb/index.php'
+    'PHP_SELF' => '/portalweb/index.php'
+    'REQUEST_TIME_FLOAT' => 1471415165.167
+    'REQUEST_TIME' => 1471415165
+]
+2016-08-17 08:26:25 [::1][-][e9gqqp5qjsmujk7adold0lqvu1][error][yii\web\HttpException:403] exception 'yii\web\ForbiddenHttpException' with message 'Login Requerido' in C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\User.php:435
+Stack trace:
+#0 C:\xampp\htdocs\portalweb\protected\humhub\components\behaviors\AccessControl.php(75): yii\web\User->loginRequired()
+#1 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\ActionFilter.php(73): humhub\components\behaviors\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Component.php(541): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Controller.php(269): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\Controller.php(108): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 C:\xampp\htdocs\portalweb\protected\humhub\components\Controller.php(68): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Controller.php(152): humhub\components\Controller->beforeAction(Object(yii\base\InlineAction))
+#8 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('get-update-json', Array)
+#9 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('notification/li...', Array)
+#10 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#11 C:\xampp\htdocs\portalweb\index.php(25): yii\base\Application->run()
+#12 {main}
+2016-08-17 08:26:25 [::1][-][e9gqqp5qjsmujk7adold0lqvu1][info][application] $_GET = [
+    'r' => 'notification/list/get-update-json'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'MWRaY19oWmV0LRw0ElgNEAM8GC4YGGwAXTsuVAckIy1GDwwHDDsDNQ=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/portalweb/index.php?r=admin%2Fuser-profile'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8'
+    'HTTP_COOKIE' => 'pm_user-tags-panel=expanded; pm_user-spaces-panel=expanded; pm_getting-started-panel=expanded; pm_new-people-panel=expanded; pm_new-spaces-panel=expanded; _csrf=452f0f8fe6203cce44d56f816a6ebd3ad6b339e68f29e7194e66780cd979f1a4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BR39K_8t6eZY5h0lnqf3mJz1gl2xAqR1%22%3B%7D; PHPSESSID=e9gqqp5qjsmujk7adold0lqvu1'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\xampp\\htdocs\\yii-1.1.14\\framework;C:\\xampp\\php;~\\.composer\\vendor\\bin\\;C:\\Program Files (x86)\\Microsoft ASP.NET\\ASP.NET Web Pages\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\8.0\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Java\\jdk1.7.0_15\\bin;C:\\Program Files\\Microsoft\\Web Platform Installer\\;C:\\Program Files (x86)\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\ManagementStudio\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Users\\JulyosCesar\\AppData\\Roaming\\npm;C:\\Users\\JulyosCesar\\AppData\\Local\\.meteor\\'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/portalweb/index.php'
+    'REMOTE_PORT' => '59460'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=notification%2Flist%2Fget-update-json'
+    'REQUEST_URI' => '/portalweb/index.php?r=notification%2Flist%2Fget-update-json'
+    'SCRIPT_NAME' => '/portalweb/index.php'
+    'PHP_SELF' => '/portalweb/index.php'
+    'REQUEST_TIME_FLOAT' => 1471415185.169
+    'REQUEST_TIME' => 1471415185
+]
+2016-08-17 08:26:45 [::1][-][e9gqqp5qjsmujk7adold0lqvu1][error][yii\web\HttpException:403] exception 'yii\web\ForbiddenHttpException' with message 'Login Requerido' in C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\User.php:435
+Stack trace:
+#0 C:\xampp\htdocs\portalweb\protected\humhub\components\behaviors\AccessControl.php(75): yii\web\User->loginRequired()
+#1 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\ActionFilter.php(73): humhub\components\behaviors\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Component.php(541): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Controller.php(269): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\Controller.php(108): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 C:\xampp\htdocs\portalweb\protected\humhub\components\Controller.php(68): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Controller.php(152): humhub\components\Controller->beforeAction(Object(yii\base\InlineAction))
+#8 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('get-update-json', Array)
+#9 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('notification/li...', Array)
+#10 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#11 C:\xampp\htdocs\portalweb\index.php(25): yii\base\Application->run()
+#12 {main}
+2016-08-17 08:26:45 [::1][-][e9gqqp5qjsmujk7adold0lqvu1][info][application] $_GET = [
+    'r' => 'notification/list/get-update-json'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'MWRaY19oWmV0LRw0ElgNEAM8GC4YGGwAXTsuVAckIy1GDwwHDDsDNQ=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/portalweb/index.php?r=admin%2Fuser-profile'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8'
+    'HTTP_COOKIE' => 'pm_user-tags-panel=expanded; pm_user-spaces-panel=expanded; pm_getting-started-panel=expanded; pm_new-people-panel=expanded; pm_new-spaces-panel=expanded; _csrf=452f0f8fe6203cce44d56f816a6ebd3ad6b339e68f29e7194e66780cd979f1a4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BR39K_8t6eZY5h0lnqf3mJz1gl2xAqR1%22%3B%7D; PHPSESSID=e9gqqp5qjsmujk7adold0lqvu1'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\xampp\\htdocs\\yii-1.1.14\\framework;C:\\xampp\\php;~\\.composer\\vendor\\bin\\;C:\\Program Files (x86)\\Microsoft ASP.NET\\ASP.NET Web Pages\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\8.0\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Java\\jdk1.7.0_15\\bin;C:\\Program Files\\Microsoft\\Web Platform Installer\\;C:\\Program Files (x86)\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\ManagementStudio\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Users\\JulyosCesar\\AppData\\Roaming\\npm;C:\\Users\\JulyosCesar\\AppData\\Local\\.meteor\\'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/portalweb/index.php'
+    'REMOTE_PORT' => '59469'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=notification%2Flist%2Fget-update-json'
+    'REQUEST_URI' => '/portalweb/index.php?r=notification%2Flist%2Fget-update-json'
+    'SCRIPT_NAME' => '/portalweb/index.php'
+    'PHP_SELF' => '/portalweb/index.php'
+    'REQUEST_TIME_FLOAT' => 1471415205.169
+    'REQUEST_TIME' => 1471415205
+]
+2016-08-17 08:27:05 [::1][-][e9gqqp5qjsmujk7adold0lqvu1][error][yii\web\HttpException:403] exception 'yii\web\ForbiddenHttpException' with message 'Login Requerido' in C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\User.php:435
+Stack trace:
+#0 C:\xampp\htdocs\portalweb\protected\humhub\components\behaviors\AccessControl.php(75): yii\web\User->loginRequired()
+#1 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\ActionFilter.php(73): humhub\components\behaviors\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Component.php(541): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Controller.php(269): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\Controller.php(108): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 C:\xampp\htdocs\portalweb\protected\humhub\components\Controller.php(68): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Controller.php(152): humhub\components\Controller->beforeAction(Object(yii\base\InlineAction))
+#8 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('get-update-json', Array)
+#9 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('notification/li...', Array)
+#10 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#11 C:\xampp\htdocs\portalweb\index.php(25): yii\base\Application->run()
+#12 {main}
+2016-08-17 08:27:05 [::1][-][e9gqqp5qjsmujk7adold0lqvu1][info][application] $_GET = [
+    'r' => 'notification/list/get-update-json'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'MWRaY19oWmV0LRw0ElgNEAM8GC4YGGwAXTsuVAckIy1GDwwHDDsDNQ=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/portalweb/index.php?r=admin%2Fuser-profile'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8'
+    'HTTP_COOKIE' => 'pm_user-tags-panel=expanded; pm_user-spaces-panel=expanded; pm_getting-started-panel=expanded; pm_new-people-panel=expanded; pm_new-spaces-panel=expanded; _csrf=452f0f8fe6203cce44d56f816a6ebd3ad6b339e68f29e7194e66780cd979f1a4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BR39K_8t6eZY5h0lnqf3mJz1gl2xAqR1%22%3B%7D; PHPSESSID=e9gqqp5qjsmujk7adold0lqvu1'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\xampp\\htdocs\\yii-1.1.14\\framework;C:\\xampp\\php;~\\.composer\\vendor\\bin\\;C:\\Program Files (x86)\\Microsoft ASP.NET\\ASP.NET Web Pages\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\8.0\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Java\\jdk1.7.0_15\\bin;C:\\Program Files\\Microsoft\\Web Platform Installer\\;C:\\Program Files (x86)\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\ManagementStudio\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Users\\JulyosCesar\\AppData\\Roaming\\npm;C:\\Users\\JulyosCesar\\AppData\\Local\\.meteor\\'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/portalweb/index.php'
+    'REMOTE_PORT' => '59483'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=notification%2Flist%2Fget-update-json'
+    'REQUEST_URI' => '/portalweb/index.php?r=notification%2Flist%2Fget-update-json'
+    'SCRIPT_NAME' => '/portalweb/index.php'
+    'PHP_SELF' => '/portalweb/index.php'
+    'REQUEST_TIME_FLOAT' => 1471415225.085
+    'REQUEST_TIME' => 1471415225
+]
+2016-08-17 08:27:25 [::1][-][e9gqqp5qjsmujk7adold0lqvu1][error][yii\web\HttpException:403] exception 'yii\web\ForbiddenHttpException' with message 'Login Requerido' in C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\User.php:435
+Stack trace:
+#0 C:\xampp\htdocs\portalweb\protected\humhub\components\behaviors\AccessControl.php(75): yii\web\User->loginRequired()
+#1 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\ActionFilter.php(73): humhub\components\behaviors\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Component.php(541): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Controller.php(269): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\Controller.php(108): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 C:\xampp\htdocs\portalweb\protected\humhub\components\Controller.php(68): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Controller.php(152): humhub\components\Controller->beforeAction(Object(yii\base\InlineAction))
+#8 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('get-update-json', Array)
+#9 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('notification/li...', Array)
+#10 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#11 C:\xampp\htdocs\portalweb\index.php(25): yii\base\Application->run()
+#12 {main}
+2016-08-17 08:27:25 [::1][-][e9gqqp5qjsmujk7adold0lqvu1][info][application] $_GET = [
+    'r' => 'notification/list/get-update-json'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'MWRaY19oWmV0LRw0ElgNEAM8GC4YGGwAXTsuVAckIy1GDwwHDDsDNQ=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/portalweb/index.php?r=admin%2Fuser-profile'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8'
+    'HTTP_COOKIE' => 'pm_user-tags-panel=expanded; pm_user-spaces-panel=expanded; pm_getting-started-panel=expanded; pm_new-people-panel=expanded; pm_new-spaces-panel=expanded; _csrf=452f0f8fe6203cce44d56f816a6ebd3ad6b339e68f29e7194e66780cd979f1a4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BR39K_8t6eZY5h0lnqf3mJz1gl2xAqR1%22%3B%7D; PHPSESSID=e9gqqp5qjsmujk7adold0lqvu1'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\xampp\\htdocs\\yii-1.1.14\\framework;C:\\xampp\\php;~\\.composer\\vendor\\bin\\;C:\\Program Files (x86)\\Microsoft ASP.NET\\ASP.NET Web Pages\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\8.0\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Java\\jdk1.7.0_15\\bin;C:\\Program Files\\Microsoft\\Web Platform Installer\\;C:\\Program Files (x86)\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\ManagementStudio\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Users\\JulyosCesar\\AppData\\Roaming\\npm;C:\\Users\\JulyosCesar\\AppData\\Local\\.meteor\\'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/portalweb/index.php'
+    'REMOTE_PORT' => '59499'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=notification%2Flist%2Fget-update-json'
+    'REQUEST_URI' => '/portalweb/index.php?r=notification%2Flist%2Fget-update-json'
+    'SCRIPT_NAME' => '/portalweb/index.php'
+    'PHP_SELF' => '/portalweb/index.php'
+    'REQUEST_TIME_FLOAT' => 1471415245.082
+    'REQUEST_TIME' => 1471415245
+]
+2016-08-17 08:27:45 [::1][-][e9gqqp5qjsmujk7adold0lqvu1][error][yii\web\HttpException:403] exception 'yii\web\ForbiddenHttpException' with message 'Login Requerido' in C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\User.php:435
+Stack trace:
+#0 C:\xampp\htdocs\portalweb\protected\humhub\components\behaviors\AccessControl.php(75): yii\web\User->loginRequired()
+#1 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\ActionFilter.php(73): humhub\components\behaviors\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Component.php(541): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Controller.php(269): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\Controller.php(108): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 C:\xampp\htdocs\portalweb\protected\humhub\components\Controller.php(68): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Controller.php(152): humhub\components\Controller->beforeAction(Object(yii\base\InlineAction))
+#8 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('get-update-json', Array)
+#9 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('notification/li...', Array)
+#10 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#11 C:\xampp\htdocs\portalweb\index.php(25): yii\base\Application->run()
+#12 {main}
+2016-08-17 08:27:45 [::1][-][e9gqqp5qjsmujk7adold0lqvu1][info][application] $_GET = [
+    'r' => 'notification/list/get-update-json'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'MWRaY19oWmV0LRw0ElgNEAM8GC4YGGwAXTsuVAckIy1GDwwHDDsDNQ=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/portalweb/index.php?r=admin%2Fuser-profile'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8'
+    'HTTP_COOKIE' => 'pm_user-tags-panel=expanded; pm_user-spaces-panel=expanded; pm_getting-started-panel=expanded; pm_new-people-panel=expanded; pm_new-spaces-panel=expanded; _csrf=452f0f8fe6203cce44d56f816a6ebd3ad6b339e68f29e7194e66780cd979f1a4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BR39K_8t6eZY5h0lnqf3mJz1gl2xAqR1%22%3B%7D; PHPSESSID=e9gqqp5qjsmujk7adold0lqvu1'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\xampp\\htdocs\\yii-1.1.14\\framework;C:\\xampp\\php;~\\.composer\\vendor\\bin\\;C:\\Program Files (x86)\\Microsoft ASP.NET\\ASP.NET Web Pages\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\8.0\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Java\\jdk1.7.0_15\\bin;C:\\Program Files\\Microsoft\\Web Platform Installer\\;C:\\Program Files (x86)\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\ManagementStudio\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Users\\JulyosCesar\\AppData\\Roaming\\npm;C:\\Users\\JulyosCesar\\AppData\\Local\\.meteor\\'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/portalweb/index.php'
+    'REMOTE_PORT' => '59505'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=notification%2Flist%2Fget-update-json'
+    'REQUEST_URI' => '/portalweb/index.php?r=notification%2Flist%2Fget-update-json'
+    'SCRIPT_NAME' => '/portalweb/index.php'
+    'PHP_SELF' => '/portalweb/index.php'
+    'REQUEST_TIME_FLOAT' => 1471415265.082
+    'REQUEST_TIME' => 1471415265
+]
+2016-08-17 08:30:55 [::1][-][11un5kg9lq8i8l0da7sgf13lr7][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "user/registration2%Fregistration1".' in C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('user/registrati...', Array)
+#1 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#2 C:\xampp\htdocs\portalweb\index.php(25): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Página no encontrada.' in C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\Application.php:99
+Stack trace:
+#0 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#1 C:\xampp\htdocs\portalweb\index.php(25): yii\base\Application->run()
+#2 {main}
+2016-08-17 08:30:55 [::1][-][11un5kg9lq8i8l0da7sgf13lr7][info][application] $_GET = [
+    'r' => 'user/registration2%Fregistration1'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8'
+    'HTTP_COOKIE' => 'pm_new-people-panel=expanded; pm_new-spaces-panel=expanded; pm_user-statistics-panel=expanded; pm_spaces-statistics-panel=expanded; _csrf=83bbcbf3a7bb27a4f3e46465cf92ad154109ba02ade2ca5e07c4355cb58bfc9ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22iaAmiYoPfZ1qXxww1IJ0m126OjWrIzOS%22%3B%7D; PHPSESSID=11un5kg9lq8i8l0da7sgf13lr7'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\xampp\\htdocs\\yii-1.1.14\\framework;C:\\xampp\\php;~\\.composer\\vendor\\bin\\;C:\\Program Files (x86)\\Microsoft ASP.NET\\ASP.NET Web Pages\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\8.0\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Java\\jdk1.7.0_15\\bin;C:\\Program Files\\Microsoft\\Web Platform Installer\\;C:\\Program Files (x86)\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\ManagementStudio\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Users\\JulyosCesar\\AppData\\Roaming\\npm;C:\\Users\\JulyosCesar\\AppData\\Local\\.meteor\\'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/portalweb/index.php'
+    'REMOTE_PORT' => '59599'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=user%2Fregistration2%Fregistration1'
+    'REQUEST_URI' => '/portalweb/index.php?r=user%2Fregistration2%Fregistration1'
+    'SCRIPT_NAME' => '/portalweb/index.php'
+    'PHP_SELF' => '/portalweb/index.php'
+    'REQUEST_TIME_FLOAT' => 1471415455.785
+    'REQUEST_TIME' => 1471415455
+]
+2016-08-17 08:31:30 [::1][-][11un5kg9lq8i8l0da7sgf13lr7][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "user/registration2%Findex".' in C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('user/registrati...', Array)
+#1 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#2 C:\xampp\htdocs\portalweb\index.php(25): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Página no encontrada.' in C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\Application.php:99
+Stack trace:
+#0 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#1 C:\xampp\htdocs\portalweb\index.php(25): yii\base\Application->run()
+#2 {main}
+2016-08-17 08:31:30 [::1][-][11un5kg9lq8i8l0da7sgf13lr7][info][application] $_GET = [
+    'r' => 'user/registration2%Findex'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8'
+    'HTTP_COOKIE' => 'pm_new-people-panel=expanded; pm_new-spaces-panel=expanded; pm_user-statistics-panel=expanded; pm_spaces-statistics-panel=expanded; _csrf=83bbcbf3a7bb27a4f3e46465cf92ad154109ba02ade2ca5e07c4355cb58bfc9ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22iaAmiYoPfZ1qXxww1IJ0m126OjWrIzOS%22%3B%7D; PHPSESSID=11un5kg9lq8i8l0da7sgf13lr7'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\xampp\\htdocs\\yii-1.1.14\\framework;C:\\xampp\\php;~\\.composer\\vendor\\bin\\;C:\\Program Files (x86)\\Microsoft ASP.NET\\ASP.NET Web Pages\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\8.0\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Java\\jdk1.7.0_15\\bin;C:\\Program Files\\Microsoft\\Web Platform Installer\\;C:\\Program Files (x86)\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\ManagementStudio\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Users\\JulyosCesar\\AppData\\Roaming\\npm;C:\\Users\\JulyosCesar\\AppData\\Local\\.meteor\\'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/portalweb/index.php'
+    'REMOTE_PORT' => '59608'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=user%2Fregistration2%Findex'
+    'REQUEST_URI' => '/portalweb/index.php?r=user%2Fregistration2%Findex'
+    'SCRIPT_NAME' => '/portalweb/index.php'
+    'PHP_SELF' => '/portalweb/index.php'
+    'REQUEST_TIME_FLOAT' => 1471415490.633
+    'REQUEST_TIME' => 1471415490
+]
+2016-08-17 08:32:10 [::1][-][11un5kg9lq8i8l0da7sgf13lr7][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: user/registration/registration' in C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Controller.php:125
+Stack trace:
+#0 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('registration', Array)
+#1 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('user/registrati...', Array)
+#2 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#3 C:\xampp\htdocs\portalweb\index.php(25): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Página no encontrada.' in C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\Application.php:99
+Stack trace:
+#0 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#1 C:\xampp\htdocs\portalweb\index.php(25): yii\base\Application->run()
+#2 {main}
+2016-08-17 08:32:10 [::1][-][11un5kg9lq8i8l0da7sgf13lr7][info][application] $_GET = [
+    'r' => 'user/registration/registration'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8'
+    'HTTP_COOKIE' => 'pm_new-people-panel=expanded; pm_new-spaces-panel=expanded; pm_user-statistics-panel=expanded; pm_spaces-statistics-panel=expanded; _csrf=83bbcbf3a7bb27a4f3e46465cf92ad154109ba02ade2ca5e07c4355cb58bfc9ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22iaAmiYoPfZ1qXxww1IJ0m126OjWrIzOS%22%3B%7D; PHPSESSID=11un5kg9lq8i8l0da7sgf13lr7'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\xampp\\htdocs\\yii-1.1.14\\framework;C:\\xampp\\php;~\\.composer\\vendor\\bin\\;C:\\Program Files (x86)\\Microsoft ASP.NET\\ASP.NET Web Pages\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\8.0\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Java\\jdk1.7.0_15\\bin;C:\\Program Files\\Microsoft\\Web Platform Installer\\;C:\\Program Files (x86)\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\ManagementStudio\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Users\\JulyosCesar\\AppData\\Roaming\\npm;C:\\Users\\JulyosCesar\\AppData\\Local\\.meteor\\'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/portalweb/index.php'
+    'REMOTE_PORT' => '59625'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=user%2Fregistration%2Fregistration'
+    'REQUEST_URI' => '/portalweb/index.php?r=user%2Fregistration%2Fregistration'
+    'SCRIPT_NAME' => '/portalweb/index.php'
+    'PHP_SELF' => '/portalweb/index.php'
+    'REQUEST_TIME_FLOAT' => 1471415530.377
+    'REQUEST_TIME' => 1471415530
+]
+2016-08-17 08:38:41 [::1][-][doiqshv32te3893kcbk50ivpp1][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: user/registration/Registration' in C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Controller.php:125
+Stack trace:
+#0 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('Registration', Array)
+#1 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('user/registrati...', Array)
+#2 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#3 C:\xampp\htdocs\portalweb\index.php(25): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Página no encontrada.' in C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\Application.php:99
+Stack trace:
+#0 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#1 C:\xampp\htdocs\portalweb\index.php(25): yii\base\Application->run()
+#2 {main}
+2016-08-17 08:38:41 [::1][-][doiqshv32te3893kcbk50ivpp1][info][application] $_GET = [
+    'r' => 'user/registration/Registration'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8'
+    'HTTP_COOKIE' => 'pm_new-people-panel=expanded; pm_new-spaces-panel=expanded; pm_user-statistics-panel=expanded; pm_spaces-statistics-panel=expanded; pm_getting-started-panel=expanded; _csrf=83bbcbf3a7bb27a4f3e46465cf92ad154109ba02ade2ca5e07c4355cb58bfc9ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22iaAmiYoPfZ1qXxww1IJ0m126OjWrIzOS%22%3B%7D; PHPSESSID=doiqshv32te3893kcbk50ivpp1; language=bc9cdfef269185ac1227de2026559ac7ebdcf2f62d54136ecf0f38f5ca783691a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22es%22%3B%7D'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\xampp\\htdocs\\yii-1.1.14\\framework;C:\\xampp\\php;~\\.composer\\vendor\\bin\\;C:\\Program Files (x86)\\Microsoft ASP.NET\\ASP.NET Web Pages\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\8.0\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Java\\jdk1.7.0_15\\bin;C:\\Program Files\\Microsoft\\Web Platform Installer\\;C:\\Program Files (x86)\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\ManagementStudio\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Users\\JulyosCesar\\AppData\\Roaming\\npm;C:\\Users\\JulyosCesar\\AppData\\Local\\.meteor\\'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/portalweb/index.php'
+    'REMOTE_PORT' => '59755'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=user%2Fregistration%2FRegistration'
+    'REQUEST_URI' => '/portalweb/index.php?r=user%2Fregistration%2FRegistration'
+    'SCRIPT_NAME' => '/portalweb/index.php'
+    'PHP_SELF' => '/portalweb/index.php'
+    'REQUEST_TIME_FLOAT' => 1471415921.174
+    'REQUEST_TIME' => 1471415921
+]
+2016-08-17 09:12:49 [::1][5][gub4s80dt3l3h9fqh1qcd7aj14][error][yii\web\HttpException:401] exception 'yii\web\HttpException' with message 'Your are already logged in! - Logout first!' in C:\xampp\htdocs\portalweb\protected\humhub\modules\user\controllers\RegistrationController.php:45
+Stack trace:
+#0 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Controller.php(152): humhub\modules\user\controllers\RegistrationController->beforeAction(Object(yii\base\InlineAction))
+#1 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('registration1', Array)
+#2 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('user/registrati...', Array)
+#3 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#4 C:\xampp\htdocs\portalweb\index.php(25): yii\base\Application->run()
+#5 {main}
+2016-08-17 09:12:49 [::1][5][gub4s80dt3l3h9fqh1qcd7aj14][info][application] $_GET = [
+    'r' => 'user/registration/registration1'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8'
+    'HTTP_COOKIE' => 'pm_new-people-panel=expanded; pm_new-spaces-panel=expanded; pm_user-statistics-panel=expanded; pm_spaces-statistics-panel=expanded; pm_getting-started-panel=expanded; _csrf=83bbcbf3a7bb27a4f3e46465cf92ad154109ba02ade2ca5e07c4355cb58bfc9ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22iaAmiYoPfZ1qXxww1IJ0m126OjWrIzOS%22%3B%7D; language=bc9cdfef269185ac1227de2026559ac7ebdcf2f62d54136ecf0f38f5ca783691a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22es%22%3B%7D; PHPSESSID=gub4s80dt3l3h9fqh1qcd7aj14; _identity=e10970cb33fca6b6305d4981bc5692cc336859cb085778a47c2270c453d02b73a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B5%2C%22dc230e05-6f91-4e4e-ad1c-c3fc440f7f0b%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\xampp\\htdocs\\yii-1.1.14\\framework;C:\\xampp\\php;~\\.composer\\vendor\\bin\\;C:\\Program Files (x86)\\Microsoft ASP.NET\\ASP.NET Web Pages\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\8.0\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Java\\jdk1.7.0_15\\bin;C:\\Program Files\\Microsoft\\Web Platform Installer\\;C:\\Program Files (x86)\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\ManagementStudio\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Users\\JulyosCesar\\AppData\\Roaming\\npm;C:\\Users\\JulyosCesar\\AppData\\Local\\.meteor\\'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/portalweb/index.php'
+    'REMOTE_PORT' => '60277'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=user%2Fregistration%2Fregistration1'
+    'REQUEST_URI' => '/portalweb/index.php?r=user%2Fregistration%2Fregistration1'
+    'SCRIPT_NAME' => '/portalweb/index.php'
+    'PHP_SELF' => '/portalweb/index.php'
+    'REQUEST_TIME_FLOAT' => 1471417969.732
+    'REQUEST_TIME' => 1471417969
+]
+2016-08-17 09:25:18 [::1][-][d2jqo41r67cp5c69ofhhud6t04][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected '->' (T_OBJECT_OPERATOR)' in C:\xampp\htdocs\portalweb\protected\humhub\modules\user\models\forms\Registration.php:103
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-08-17 09:25:18 [::1][-][d2jqo41r67cp5c69ofhhud6t04][info][application] $_GET = [
+    'r' => 'user/registration/registration1'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8'
+    'HTTP_COOKIE' => 'pm_new-people-panel=expanded; pm_new-spaces-panel=expanded; pm_user-statistics-panel=expanded; pm_spaces-statistics-panel=expanded; pm_getting-started-panel=expanded; _csrf=83bbcbf3a7bb27a4f3e46465cf92ad154109ba02ade2ca5e07c4355cb58bfc9ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22iaAmiYoPfZ1qXxww1IJ0m126OjWrIzOS%22%3B%7D; PHPSESSID=d2jqo41r67cp5c69ofhhud6t04; language=bc9cdfef269185ac1227de2026559ac7ebdcf2f62d54136ecf0f38f5ca783691a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22es%22%3B%7D'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\xampp\\htdocs\\yii-1.1.14\\framework;C:\\xampp\\php;~\\.composer\\vendor\\bin\\;C:\\Program Files (x86)\\Microsoft ASP.NET\\ASP.NET Web Pages\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\8.0\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Java\\jdk1.7.0_15\\bin;C:\\Program Files\\Microsoft\\Web Platform Installer\\;C:\\Program Files (x86)\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\ManagementStudio\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Users\\JulyosCesar\\AppData\\Roaming\\npm;C:\\Users\\JulyosCesar\\AppData\\Local\\.meteor\\'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/portalweb/index.php'
+    'REMOTE_PORT' => '60436'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=user%2Fregistration%2Fregistration1'
+    'REQUEST_URI' => '/portalweb/index.php?r=user%2Fregistration%2Fregistration1'
+    'SCRIPT_NAME' => '/portalweb/index.php'
+    'PHP_SELF' => '/portalweb/index.php'
+    'REQUEST_TIME_FLOAT' => 1471418718.25
+    'REQUEST_TIME' => 1471418718
+]
+2016-08-17 09:28:39 [::1][-][d2jqo41r67cp5c69ofhhud6t04][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: typeForm' in C:\xampp\htdocs\portalweb\protected\humhub\modules\user\controllers\RegistrationController.php:98
+Stack trace:
+#0 C:\xampp\htdocs\portalweb\protected\humhub\modules\user\controllers\RegistrationController.php(98): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 98, Array)
+#1 [internal function]: humhub\modules\user\controllers\RegistrationController->actionRegistration1()
+#2 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('registration1', Array)
+#5 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('user/registrati...', Array)
+#6 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#7 C:\xampp\htdocs\portalweb\index.php(25): yii\base\Application->run()
+#8 {main}
+2016-08-17 09:28:39 [::1][-][d2jqo41r67cp5c69ofhhud6t04][info][application] $_GET = [
+    'r' => 'user/registration/registration1'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8'
+    'HTTP_COOKIE' => 'pm_new-people-panel=expanded; pm_new-spaces-panel=expanded; pm_user-statistics-panel=expanded; pm_spaces-statistics-panel=expanded; pm_getting-started-panel=expanded; _csrf=83bbcbf3a7bb27a4f3e46465cf92ad154109ba02ade2ca5e07c4355cb58bfc9ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22iaAmiYoPfZ1qXxww1IJ0m126OjWrIzOS%22%3B%7D; PHPSESSID=d2jqo41r67cp5c69ofhhud6t04; language=bc9cdfef269185ac1227de2026559ac7ebdcf2f62d54136ecf0f38f5ca783691a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A2%3A%22es%22%3B%7D'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\xampp\\htdocs\\yii-1.1.14\\framework;C:\\xampp\\php;~\\.composer\\vendor\\bin\\;C:\\Program Files (x86)\\Microsoft ASP.NET\\ASP.NET Web Pages\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\8.0\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Java\\jdk1.7.0_15\\bin;C:\\Program Files\\Microsoft\\Web Platform Installer\\;C:\\Program Files (x86)\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\ManagementStudio\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Users\\JulyosCesar\\AppData\\Roaming\\npm;C:\\Users\\JulyosCesar\\AppData\\Local\\.meteor\\'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/portalweb/index.php'
+    'REMOTE_PORT' => '60469'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=user%2Fregistration%2Fregistration1'
+    'REQUEST_URI' => '/portalweb/index.php?r=user%2Fregistration%2Fregistration1'
+    'SCRIPT_NAME' => '/portalweb/index.php'
+    'PHP_SELF' => '/portalweb/index.php'
+    'REQUEST_TIME_FLOAT' => 1471418919.282
+    'REQUEST_TIME' => 1471418919
+]
+2016-08-17 09:52:17 [::1][6][mp76vkh59tp00u5p1tck67omm0][error][yii\web\HttpException:401] exception 'yii\web\HttpException' with message 'Your are already logged in! - Logout first!' in C:\xampp\htdocs\portalweb\protected\humhub\modules\user\controllers\RegistrationController.php:45
+Stack trace:
+#0 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Controller.php(152): humhub\modules\user\controllers\RegistrationController->beforeAction(Object(yii\base\InlineAction))
+#1 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('registration1', Array)
+#2 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('user/registrati...', Array)
+#3 C:\xampp\htdocs\portalweb\protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#4 C:\xampp\htdocs\portalweb\index.php(25): yii\base\Application->run()
+#5 {main}
+2016-08-17 09:52:17 [::1][6][mp76vkh59tp00u5p1tck67omm0][info][application] $_GET = [
+    'r' => 'user/registration/registration1'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/portalweb/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8'
+    'HTTP_COOKIE' => 'pm_user-tags-panel=expanded; pm_user-spaces-panel=expanded; pm_getting-started-panel=expanded; pm_new-people-panel=expanded; pm_new-spaces-panel=expanded; _csrf=f3c6311b93d5e0bdf76e1568c08e25c5f13df78287cebac197de98325f565883a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22TJLFtiojTeGt_dF4VGvQowgT_1pmvtbi%22%3B%7D; PHPSESSID=mp76vkh59tp00u5p1tck67omm0'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\xampp\\htdocs\\yii-1.1.14\\framework;C:\\xampp\\php;~\\.composer\\vendor\\bin\\;C:\\Program Files (x86)\\Microsoft ASP.NET\\ASP.NET Web Pages\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\8.0\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Java\\jdk1.7.0_15\\bin;C:\\Program Files\\Microsoft\\Web Platform Installer\\;C:\\Program Files (x86)\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\nodejs\\;C:\\Program Files\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\Tools\\Binn\\ManagementStudio\\;C:\\Program Files (x86)\\Microsoft SQL Server\\120\\DTS\\Binn\\;C:\\Users\\JulyosCesar\\AppData\\Roaming\\npm;C:\\Users\\JulyosCesar\\AppData\\Local\\.meteor\\'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.23'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/portalweb/index.php'
+    'REMOTE_PORT' => '60739'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=user%2Fregistration%2Fregistration1'
+    'REQUEST_URI' => '/portalweb/index.php?r=user%2Fregistration%2Fregistration1'
+    'SCRIPT_NAME' => '/portalweb/index.php'
+    'PHP_SELF' => '/portalweb/index.php'
+    'REQUEST_TIME_FLOAT' => 1471420337.232
+    'REQUEST_TIME' => 1471420337
+]
